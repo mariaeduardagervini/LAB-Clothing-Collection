@@ -1,0 +1,60 @@
+{
+  "modelos": [
+    {
+      "id": 1,
+      "nome": "Saias",
+      "colecao": 1
+    },
+    {
+      "id": 2,
+      "nome": "Vestidos",
+      "colecao": 1
+    },
+    {
+      "id": 3,
+      "nome": "Calças",
+      "colecao": 1
+    },
+    {
+      "id": 4,
+      "nome": "Shorts e Bermudas",
+      "colecao": 1
+    },
+    {
+      "id": 5,
+      "nome": "Camisetas",
+      "colecao": 1
+    },
+    {
+      "id": 6,
+      "nome": "Jaquetas",
+      "colecao": 1
+    }
+  ],
+  "colecoes": [
+    {
+      "id": 1,
+      "nome": "Nike"
+    },
+    {
+      "id": 2,
+      "nome": "Adidas"
+    },
+    {
+      "id": 3,
+      "nome": "Osklen"
+    },
+    {
+      "id": 4,
+      "nome": "Renner"
+    },
+    {
+      "id": 5,
+      "nome": "Farm"
+    },
+    {
+      "id": 6,
+      "nome": "Zara"
+    }
+  ]
+}
