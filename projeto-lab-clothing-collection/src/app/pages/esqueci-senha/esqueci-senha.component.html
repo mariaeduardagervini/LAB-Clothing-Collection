@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="emailForm">
   <h2 class="pt-2">Redefinir Senha</h2>
 
   <p class="sub-header">
@@ -11,10 +11,24 @@
       type="email"
       class="form-control"
       id="email"
+      formControlName="loginEmail"
       placeholder="Informe o seu e-mail"
       name="email"
+      required
     />
     <label for="email">Informe seu e-mail</label>
+    <div
+      class="alert alert-danger"
+      *ngIf="emailForm.get('loginEmail')?.errors?.['required'] && emailForm.get('loginEmail')?.touched"
+    >
+      O e-mail é obrigatório!
+    </div>
+    <div
+      class="alert alert-danger"
+      *ngIf="emailForm.get('loginEmail')?.errors?.['pattern'] && emailForm.get('loginEmail')?.touched"
+    >
+      E-mail inválido!
+    </div>
   </div>
 
   <button class="btn btn-primary">Enviar Recuperação</button>

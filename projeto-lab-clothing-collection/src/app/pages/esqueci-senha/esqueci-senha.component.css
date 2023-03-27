@@ -73,3 +73,9 @@ form button:hover {
   background: #0072cf84;
   transition: all 0.6s;
 }
+.alert-danger {
+  position: absolute;
+  top: 150px;
+  font-size: 12px;
+  padding: 5px;
+}
