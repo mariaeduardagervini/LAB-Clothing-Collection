@@ -1,0 +1,19 @@
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f5ff;
+}
+img {
+  position: relative;
+  top: -280px;
+  left: 260px;
+}
+.form {
+  width: 480px;
+  height: 457px;
+  background: #ffffff;
+  border-radius: 8px;
+}

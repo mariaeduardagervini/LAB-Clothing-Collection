@@ -1,25 +1,8 @@
-.container {
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: #f2f5ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-img {
-  position: absolute;
-  left: 48.81%;
-  right: 48.81%;
-  top: 19.4%;
-  bottom: 73.93%;
-}
-.box-login {
+form {
   position: absolute;
   width: 480px;
   min-height: 407px;
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 140px 40px;
+  padding: 130px 40px;
 }
 
 h2 {
@@ -27,7 +10,7 @@ h2 {
   width: 79px;
   height: 29px;
   left: 201px;
-  top: 53px;
+  top: 33px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -99,7 +82,7 @@ form button {
   top: 317px;
   background: #0073cf;
   border-radius: 6px;
-  margin-top: 9%;
+  margin-top: 7%;
 }
 
 form button:hover {
@@ -108,11 +91,12 @@ form button:hover {
 }
 .span-login {
   width: 300px;
-  margin-top: 650px;
+  margin-top: 480px;
   line-height: 50px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  left: 20%;
   gap: 12px;
 }
 span {

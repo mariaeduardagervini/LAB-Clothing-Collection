@@ -9,6 +9,7 @@ const routes: Routes = [
     path: '',
     component: ContentComponent,
     children: [
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
       { path: 'esqueci-senha', component: EsqueciSenhaComponent },
     ],
