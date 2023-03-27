@@ -11,6 +11,6 @@ export class UsuarioService {
   constructor(private http: HttpClient) {}
 
   acessarUsuarios(): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>(`${API_PATH}/usuarios}`);
+    return this.http.get<Usuario[]>(`${API_PATH}/usuarios`);
   }
 }
