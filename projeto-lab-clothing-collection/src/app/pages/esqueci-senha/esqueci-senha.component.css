@@ -3,19 +3,20 @@ form {
   width: 480px;
   min-height: 407px;
   padding: 130px 40px;
+  z-index: 1;
 }
 
 h2 {
   position: absolute;
   height: 29px;
   left: 151px;
-  top: 33px;
+  top: 23px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
-  color: #2c2c2c;
+  color: #304c71;
 }
 p {
   font-family: "Inter";
@@ -30,7 +31,7 @@ p {
   width: 352px;
   height: 19px;
   left: 64px;
-  top: 94px;
+  top: 84px;
   text-align: center;
 }
 .form-floating {
@@ -43,13 +44,13 @@ form input {
   width: 352px;
   height: 50px;
   border: 1px solid #b4b6c14f;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 form label {
   font-size: 14px;
   color: #b4b6c1c2;
   text-align: justify;
-  margin-top: 78px;
+  margin-top: 68px;
   left: 22px;
 }
 
@@ -63,7 +64,7 @@ form button {
   width: 352px;
   height: 50px;
   left: 64px;
-  top: 317px;
+  top: 307px;
   background: #0073cf;
   border-radius: 6px;
   margin-top: 7%;
@@ -78,4 +79,14 @@ form button:hover {
   top: 150px;
   font-size: 12px;
   padding: 5px;
+}
+a {
+  position: relative;
+  top: 70px;
+  left: 50px;
+  z-index: 2;
+  color: #304c71;
+  font-size: 27px;
+  cursor: pointer;
+  text-decoration: none;
 }
