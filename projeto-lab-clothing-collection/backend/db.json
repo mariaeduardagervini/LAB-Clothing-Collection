@@ -1,4 +1,16 @@
 {
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "maria@email.com",
+      "senha": "Maria@12"
+    },
+    {
+      "id": 2,
+      "email": "dev@email.com",
+      "senha": "Dev@1234"
+    }
+  ],
   "modelos": [
     {
       "id": 1,
