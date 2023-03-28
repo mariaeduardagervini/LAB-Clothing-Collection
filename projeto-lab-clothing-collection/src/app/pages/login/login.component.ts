@@ -114,4 +114,7 @@ export class LoginComponent implements OnInit {
       this.criarLocalStorage(false);
     }
   }
+  entrar = {
+    titulo: 'Entrar',
+  };
 }

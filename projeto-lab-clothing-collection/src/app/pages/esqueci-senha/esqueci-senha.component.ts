@@ -40,4 +40,10 @@ export class EsqueciSenhaComponent implements OnInit {
       this.mostraTela = true;
     }
   }
+  irLogin = {
+    titulo: 'Ir para login',
+  };
+  enviar = {
+    titulo: 'Enviar Recuperação',
+  };
 }

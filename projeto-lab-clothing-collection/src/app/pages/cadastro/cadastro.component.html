@@ -1,0 +1,82 @@
+<div class="form">
+  <form>
+    <h2 class="header">Sign Up</h2>
+
+    <p class="sub-header">Insira seus dados para criar uma conta</p>
+
+    <div class="form-floating mb-3 mt-3">
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        placeholder="Nome"
+        required
+      />
+      <label for="nome">Nome</label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+      <input
+        type="text"
+        class="form-control"
+        id="empresa"
+        placeholder="Empresa"
+        required
+      />
+      <label for="empresa">Empresa</label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+      <input
+        type="text"
+        class="form-control"
+        id="cnpj"
+        placeholder="CNPJ"
+        required
+      />
+      <label for="cnpj">CNPJ</label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Informe seu e-mail"
+        required
+      />
+      <label for="email">Informe seu e-mail</label>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="senha"
+            placeholder="Senha"
+            required
+          />
+          <label for="senha">Senha</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating">
+          <input
+            type="password"
+            id="confSenha"
+            class="form-control"
+            placeholder="Confirmar senha"
+            required
+          />
+          <label for="confSenha">Confirmar senha</label>
+        </div>
+      </div>
+    </div>
+    <app-botao class="botao" [btnConfigs]="criarConta"></app-botao>
+  </form>
+</div>
+<div class="span-cadastro">
+  <span>Já possui uma conta? <a routerLink="/login">Realizar login</a></span>
+</div>

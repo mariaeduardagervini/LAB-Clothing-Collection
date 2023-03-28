@@ -3,14 +3,13 @@ form {
   width: 480px;
   min-height: 407px;
   padding: 130px 40px;
-  z-index: 1;
 }
 
 h2 {
   position: absolute;
   height: 29px;
   left: 151px;
-  top: 23px;
+  top: 15px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -54,26 +53,6 @@ form label {
   left: 22px;
 }
 
-form button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-  position: absolute;
-  width: 352px;
-  height: 50px;
-  left: 64px;
-  top: 307px;
-  background: #0073cf;
-  border-radius: 6px;
-  margin-top: 7%;
-}
-
-form button:hover {
-  background: #0072cf84;
-  transition: all 0.6s;
-}
 .alert-danger {
   position: absolute;
   top: 150px;

@@ -48,14 +48,12 @@
     </div>
   </div>
 
-  <button class="btn btn-primary form-button" (click)="enviarForm()">
-    Entrar
-  </button>
+  <app-botao [btnConfigs]="entrar" (click)="enviarForm()"></app-botao>
 </form>
 
 <div class="span-login">
   <span
     >Esqueceu sua senha?<a routerLink="/esqueci-senha">Redefinir senha</a></span
   >
-  <span>Ainda não tem uma conta?<a href="#">Cadastre-se</a></span>
+  <span>Ainda não tem uma conta?<a routerLink="/cadastro">Cadastre-se</a></span>
 </div>

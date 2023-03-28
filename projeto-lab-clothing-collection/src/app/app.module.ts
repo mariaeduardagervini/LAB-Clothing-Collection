@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContentComponent } from './layouts/content/content.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { BotaoComponent } from './components/botao/botao.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, ContentComponent, EsqueciSenhaComponent],
+  declarations: [AppComponent, LoginComponent, ContentComponent, EsqueciSenhaComponent, CadastroComponent, BotaoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

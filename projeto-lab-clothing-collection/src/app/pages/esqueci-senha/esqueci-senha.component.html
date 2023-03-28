@@ -1,6 +1,7 @@
 <a routerLink="/login" class="material-symbols-outlined nav-link">
   arrow_back
 </a>
+
 <form [formGroup]="emailForm">
   <h2 class="pt-2">Redefinir Senha</h2>
   <div *ngIf="mostraTela; else telaSecundaria">
@@ -33,10 +34,7 @@
         E-mail inválido!
       </div>
     </div>
-
-    <button class="btn btn-primary" (click)="enviarRecuperacao()">
-      Enviar Recuperação
-    </button>
+    <app-botao [btnConfigs]="enviar" (click)="enviarRecuperacao()"></app-botao>
   </div>
 
   <ng-template #telaSecundaria>
@@ -44,6 +42,6 @@
       Um link para redefinição de senha foi enviado para o e-mail
       {{ loginEmail }}
     </p>
-    <button class="btn btn-primary" routerLink="/login">Ir para login</button>
+    <app-botao [btnConfigs]="irLogin" routerLink="/login"></app-botao>
   </ng-template>
 </form>
