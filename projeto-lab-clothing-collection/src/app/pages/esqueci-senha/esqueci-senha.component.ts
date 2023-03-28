@@ -11,6 +11,8 @@ export class EsqueciSenhaComponent implements OnInit {
   emailForm!: FormGroup;
   emailPattern: string =
     '^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+).(.[a-z]{2,3})$';
+  mostraTela: boolean = true;
+  email: string = 'maria@live.com';
   constructor(private router: Router, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
@@ -27,5 +29,15 @@ export class EsqueciSenhaComponent implements OnInit {
         ]),
       ],
     });
+  }
+  get loginEmail() {
+    return this.emailForm.get('loginEmail')?.value;
+  }
+  enviarRecuperacao() {
+    if (this.mostraTela) {
+      this.mostraTela = false;
+    } else {
+      this.mostraTela = true;
+    }
   }
 }

@@ -90,3 +90,12 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
+.info {
+  position: absolute;
+  width: 352px;
+  height: 19px;
+  left: 64px;
+  top: 184px;
+  text-align: center;
+}
