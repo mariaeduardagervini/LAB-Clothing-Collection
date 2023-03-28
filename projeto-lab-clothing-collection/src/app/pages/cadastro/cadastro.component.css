@@ -84,7 +84,7 @@ input[type="password"] {
   flex-wrap: wrap;
   left: 20%;
   gap: 12px;
-  top: 540px;
+  top: 570px;
 }
 span {
   color: #989898;
@@ -93,4 +93,13 @@ a {
   padding-left: 3px;
   text-decoration: none;
   font-weight: 500;
+}
+.info {
+  position: absolute;
+  width: 252px;
+  height: 79px;
+  left: 114px;
+  top: 134px;
+  text-align: center;
+  line-height: 35px;
 }

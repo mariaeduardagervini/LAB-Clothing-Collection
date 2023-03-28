@@ -12,7 +12,7 @@ export class EsqueciSenhaComponent implements OnInit {
   emailPattern: string =
     '^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+).(.[a-z]{2,3})$';
   mostraTela: boolean = true;
-  email: string = 'maria@live.com';
+
   constructor(private router: Router, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
