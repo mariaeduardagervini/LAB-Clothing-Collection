@@ -4,7 +4,7 @@ export interface IUsuario {
   senha: string;
 }
 export class Usuario implements IUsuario {
-  id?: number | undefined;
+  id?: number;
   email!: string;
   senha!: string;
 }

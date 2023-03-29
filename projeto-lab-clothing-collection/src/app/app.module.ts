@@ -9,9 +9,21 @@ import { ContentComponent } from './layouts/content/content.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { BotaoComponent } from './components/botao/botao.component';
+import { FullComponent } from './layouts/full/full.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthUserGuard } from './services/guards/auth-user.guard';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, ContentComponent, EsqueciSenhaComponent, CadastroComponent, BotaoComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    ContentComponent,
+    EsqueciSenhaComponent,
+    CadastroComponent,
+    BotaoComponent,
+    FullComponent,
+    DashboardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -19,7 +31,7 @@ import { BotaoComponent } from './components/botao/botao.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [AuthUserGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

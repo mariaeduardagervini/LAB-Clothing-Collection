@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -20,15 +20,15 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
-    private service: UsuarioService
+    private service: UsuarioService,
+    private route: ActivatedRoute
   ) {}
   ngOnInit(): void {
-    this.newForm();
+    this.newForm(new Usuario());
     this.criarLocalStorage(false);
-    this.getListaUsuarios();
   }
 
-  newForm() {
+  newForm(usuario: Usuario) {
     this.loginForm = this.formBuilder.group({
       loginEmail: [
         '',
@@ -69,7 +69,6 @@ export class LoginComponent implements OnInit {
         this.usuario = usuario;
       }
     });
-
     if (this.usuario.email === undefined && this.loginEmail.value === null) {
       this.loginEmail.setErrors({ required: true });
       this.loginEmail.markAsTouched();
@@ -87,34 +86,18 @@ export class LoginComponent implements OnInit {
   }
 
   verificarSenha() {
-    if (this.loginSenha.value === null) {
-      this.loginSenha.setErrors({ required: true });
-      this.loginSenha.markAsTouched();
+    if (this.usuario.senha === this.loginSenha.value) {
+      return true;
     } else {
-      if (this.usuario.senha === this.loginSenha.value) {
-        return true;
-      } else {
-        this.loginSenha.setErrors({ invalid: true });
-        this.loginSenha.markAsTouched();
-        return false;
-      }
+      return false;
     }
-    return false;
   }
 
-  enviarForm() {
-    if (this.validarUsuario()) {
-      if (this.verificarSenha()) {
-        this.criarLocalStorage(true);
-        this.router.navigate(['/']);
-      } else {
-        this.criarLocalStorage(false);
-      }
+  login() {
+    if (this.validarUsuario() === true) {
+      console.log('autenticado');
     } else {
-      this.criarLocalStorage(false);
+      console.log('não autenticado');
     }
   }
-  entrar = {
-    titulo: 'Entrar',
-  };
 }

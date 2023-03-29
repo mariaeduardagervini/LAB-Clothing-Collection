@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (submit)="login()">
   <h2 class="header">Sign In</h2>
 
   <p class="sub-header">Insira suas credenciais para acessar sua conta</p>
@@ -48,7 +48,13 @@
     </div>
   </div>
 
-  <app-botao [btnConfigs]="entrar" (click)="enviarForm()"></app-botao>
+  <button
+    type="submit"
+    class="btn btn-primary btn-block mb-4"
+    [disabled]="loginForm.invalid"
+  >
+    Entrar
+  </button>
 </form>
 
 <div class="span-login">
