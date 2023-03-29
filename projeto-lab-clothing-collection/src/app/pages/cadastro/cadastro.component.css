@@ -103,3 +103,12 @@ a {
   text-align: center;
   line-height: 35px;
 }
+.alert-danger {
+  position: absolute;
+  top: 5px;
+  left: 430px;
+  font-size: 12px;
+  padding: 5px;
+  width: 200px;
+  margin: 10px;
+}

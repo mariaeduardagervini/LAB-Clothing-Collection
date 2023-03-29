@@ -1,6 +1,6 @@
 <div class="form">
   <div *ngIf="mostraTela; else telaSecundaria">
-    <form>
+    <form [formGroup]="cadastroForm" (submit)="fazerCadastro()">
       <h2 class="header">Sign Up</h2>
 
       <p class="sub-header">Insira seus dados para criar uma conta</p>
@@ -11,9 +11,16 @@
           class="form-control"
           id="nome"
           placeholder="Nome"
+          formControlName="nome"
           required
         />
         <label for="nome">Nome</label>
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroForm.get('nome')?.errors?.['required'] && cadastroForm.get('nome')?.touched"
+        >
+          O nome é obrigatório!
+        </div>
       </div>
 
       <div class="form-floating mb-3 mt-3">
@@ -22,9 +29,16 @@
           class="form-control"
           id="empresa"
           placeholder="Empresa"
+          formControlName="empresa"
           required
         />
         <label for="empresa">Empresa</label>
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroForm.get('empresa')?.errors?.['required'] && cadastroForm.get('empresa')?.touched"
+        >
+          O nome da empresa é obrigatório!
+        </div>
       </div>
 
       <div class="form-floating mb-3 mt-3">
@@ -33,9 +47,22 @@
           class="form-control"
           id="cnpj"
           placeholder="CNPJ"
+          formControlName="cnpj"
           required
         />
         <label for="cnpj">CNPJ</label>
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroForm.get('cnpj')?.errors?.['required'] && cadastroForm.get('cnpj')?.touched"
+        >
+          O CNPJ é obrigatório!
+        </div>
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroForm.get('cnpj')?.errors?.['validaCNPJ'] && cadastroForm.get('cnpj')?.touched"
+        >
+          O CNPJ não é válido!
+        </div>
       </div>
 
       <div class="form-floating mb-3 mt-3">
@@ -44,9 +71,22 @@
           class="form-control"
           id="email"
           placeholder="Informe seu e-mail"
+          formControlName="email"
           required
         />
         <label for="email">Informe seu e-mail</label>
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroForm.get('email')?.errors?.['required'] && cadastroForm.get('email')?.touched"
+        >
+          O e-mail é obrigatório!
+        </div>
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroForm.get('email')?.errors?.['pattern'] && cadastroForm.get('email')?.touched"
+        >
+          E-mail inválido!
+        </div>
       </div>
 
       <div class="row mb-4">
@@ -57,9 +97,17 @@
               class="form-control"
               id="senha"
               placeholder="Senha"
+              formControlName="senha"
               required
             />
             <label for="senha">Senha</label>
+            <div
+              class="alert alert-danger"
+              *ngIf="cadastroForm.get('senha')?.errors?.['pattern'] && cadastroForm.get('senha')?.touched"
+            >
+              A senha precisa ter 8 caracteres! E ao menos uma letra maiúscula,
+              uma minúscula, um número e um caractere especial!
+            </div>
           </div>
         </div>
         <div class="col">
@@ -69,17 +117,20 @@
               id="confSenha"
               class="form-control"
               placeholder="Confirmar senha"
+              formControlName="senha"
               required
             />
             <label for="confSenha">Confirmar senha</label>
+            <div
+              class="alert alert-danger"
+              *ngIf="cadastroForm.get('senha')?.errors?.['pattern'] && cadastroForm.get('senha')?.touched"
+            >
+              A senha não confere!
+            </div>
           </div>
         </div>
       </div>
-      <app-botao
-        class="botao"
-        [btnConfigs]="criarConta"
-        (click)="fazerCadastro()"
-      ></app-botao>
+      <app-botao class="botao" [btnConfigs]="criarConta"></app-botao>
     </form>
   </div>
   <div class="span-cadastro">
