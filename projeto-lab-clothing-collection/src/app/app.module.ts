@@ -12,6 +12,7 @@ import { BotaoComponent } from './components/botao/botao.component';
 import { FullComponent } from './layouts/full/full.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthUserGuard } from './services/guards/auth-user.guard';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AuthUserGuard } from './services/guards/auth-user.guard';
     BotaoComponent,
     FullComponent,
     DashboardComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
