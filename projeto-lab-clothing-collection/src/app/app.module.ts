@@ -13,6 +13,7 @@ import { FullComponent } from './layouts/full/full.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthUserGuard } from './services/guards/auth-user.guard';
 import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MenuComponent } from './components/menu/menu.component';
     FullComponent,
     DashboardComponent,
     MenuComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
