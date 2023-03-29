@@ -94,10 +94,11 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    if (this.validarUsuario() === true) {
-      console.log('autenticado');
-    } else {
-      console.log('não autenticado');
-    }
+    //if (this.validarUsuario() === true) {
+    console.log('autenticado');
+    this.router.navigate(['/dashboard']);
+    // } else {
+    // console.log('não autenticado');
+    // }
   }
 }
