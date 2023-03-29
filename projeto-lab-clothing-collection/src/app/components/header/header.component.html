@@ -1,1 +1,46 @@
-<p>header works!</p>
+<div class="sub-menu">
+  <div class="dropdown-center">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <img
+        class="icone-user"
+        src="../../../assets/icone-user.png"
+        alt="Icone usuário"
+      />
+    </button>
+    <ul class="dropdown-menu">
+      <li>
+        <a class="dropdown-item disabled" href="#"
+          ><img
+            class="icones"
+            src="../../../assets/icone-conta.png"
+            alt="Icone conta"
+          />Conta</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-item disabled" href="#"
+          ><img
+            class="icones"
+            src="../../../assets/icone-config.png"
+            alt="Icone configurações"
+          />Configurações</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-item" href="#"
+          ><img
+            class="icones"
+            src="../../../assets/icone-sair.png"
+            alt="Icone sair"
+            (click)="logout()"
+          />Sair</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

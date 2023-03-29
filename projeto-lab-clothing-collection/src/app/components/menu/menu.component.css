@@ -29,6 +29,6 @@ button {
   margin-top: 58px;
   margin-left: 40px;
   width: 380px;
-  height: 98vh;
+  height: 100%;
   border-right: 1.5px solid #b4b6c186;
 }

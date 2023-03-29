@@ -1,0 +1,37 @@
+div {
+  font-size: 14px;
+  color: #a4a4a4;
+}
+.sub-menu {
+  width: 1180px;
+  height: 120px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-bottom: 1px solid #b4b6c186;
+  border-radius: 5px;
+  box-shadow: 4px;
+  left: 420px;
+}
+button {
+  width: 70px;
+  height: 50px;
+  background-color: #d9d9d9;
+  border: none;
+}
+
+.icone-user {
+  width: 40px;
+}
+
+.icones {
+  margin-right: 5px;
+  width: 20px;
+}
+.disabled {
+  color: currentColor;
+  cursor: not-allowed;
+  display: inline-block;
+  pointer-events: none;
+}
