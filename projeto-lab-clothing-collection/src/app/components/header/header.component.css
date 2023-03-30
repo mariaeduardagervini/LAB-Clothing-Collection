@@ -1,6 +1,5 @@
-div {
+.sub-menu {
   font-size: 14px;
-  color: #a4a4a4;
 }
 
 button {
@@ -9,12 +8,12 @@ button {
   background-color: #d9d9d9;
   border: none;
   position: relative;
-  top: 20px;
+  top: 35px;
   left: 88%;
 }
 .icone-sino {
   position: absolute;
-  top: 35px;
+  top: 50px;
   left: 86%;
   opacity: 0.5;
 }
