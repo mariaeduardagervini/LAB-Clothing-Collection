@@ -7,9 +7,9 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.component';
-import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
-import { EditarColecaoComponent } from './pages/editar-colecao/editar-colecao.component';
+import { ListaColecoesComponent } from './pages/colecoes/lista-colecoes/lista-colecoes.component';
+import { CriarColecaoComponent } from './pages/colecoes/criar-colecao/criar-colecao.component';
+import { EditarColecaoComponent } from './pages/colecoes/editar-colecao/editar-colecao.component';
 
 const routes: Routes = [
   {
