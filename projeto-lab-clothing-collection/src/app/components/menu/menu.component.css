@@ -23,6 +23,7 @@ button {
   height: 50px;
   background-color: #4c68ff;
   margin-bottom: 30px;
-  left: 13px;
-  margin-right: 8px;
+  left: 4%;
+  right: 4%;
+  margin-right: 15px;
 }
