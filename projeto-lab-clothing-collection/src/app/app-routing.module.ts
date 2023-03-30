@@ -7,6 +7,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.component';
 
 const routes: Routes = [
   {
@@ -23,7 +24,10 @@ const routes: Routes = [
     path: '',
     component: FullComponent,
     //canActivate: [AuthUserGuard],
-    children: [{ path: 'dashboard', component: DashboardComponent }],
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'lista-colecoes', component: ListaColecoesComponent },
+    ],
   },
 ];
 
