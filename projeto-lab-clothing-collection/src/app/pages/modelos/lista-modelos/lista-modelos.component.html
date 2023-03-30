@@ -1,1 +1,24 @@
-<p>lista-modelos works!</p>
+<div class="titulo">
+  <h2>Coleções</h2>
+  <app-botao [btnConfigs]="criar" (click)="criarModelo()"></app-botao>
+</div>
+<div class="tabela-modelos">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ModeloID</th>
+        <th scope="col">Nome do Modelo</th>
+        <th scope="col">Responsável</th>
+        <th scope="col">Coleção</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a routerLink="/editar-modelo">001</a></td>
+        <td><a routerLink="/editar-modelo">Camisetas Sport</a></td>
+        <td><a routerLink="/editar-modelo">Maria Eduarda</a></td>
+        <td><a routerLink="/editar-modelo">Adidas</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

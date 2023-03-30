@@ -15,9 +15,9 @@ import { AuthUserGuard } from './services/guards/auth-user.guard';
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
-import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.component';
-import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
-import { EditarColecaoComponent } from './pages/editar-colecao/editar-colecao.component';
+import { ListaColecoesComponent } from './pages/colecoes/lista-colecoes/lista-colecoes.component';
+import { CriarColecaoComponent } from './pages/colecoes/criar-colecao/criar-colecao.component';
+import { EditarColecaoComponent } from './pages/colecoes/editar-colecao/editar-colecao.component';
 import { ListaModelosComponent } from './pages/modelos/lista-modelos/lista-modelos.component';
 
 @NgModule({
