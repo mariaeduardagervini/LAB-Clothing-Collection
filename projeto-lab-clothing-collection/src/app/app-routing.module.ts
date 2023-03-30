@@ -8,6 +8,7 @@ import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.compo
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.component';
+import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'lista-colecoes', component: ListaColecoesComponent },
+      { path: 'criar-colecao', component: CriarColecaoComponent },
     ],
   },
 ];

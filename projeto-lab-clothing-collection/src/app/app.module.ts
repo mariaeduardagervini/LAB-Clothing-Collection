@@ -16,6 +16,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.component';
+import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.co
     HeaderComponent,
     CardComponent,
     ListaColecoesComponent,
+    CriarColecaoComponent,
   ],
   imports: [
     BrowserModule,
