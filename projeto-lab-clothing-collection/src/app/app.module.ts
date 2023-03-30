@@ -15,6 +15,7 @@ import { AuthUserGuard } from './services/guards/auth-user.guard';
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
+import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CardComponent } from './components/card/card.component';
     MenuComponent,
     HeaderComponent,
     CardComponent,
+    ListaColecoesComponent,
   ],
   imports: [
     BrowserModule,
