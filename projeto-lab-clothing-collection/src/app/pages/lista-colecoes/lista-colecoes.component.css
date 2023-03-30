@@ -39,6 +39,13 @@ tr {
   font-size: 16px;
   color: #9395a3;
 }
-tbody tr {
+tbody tr,
+a {
   line-height: 55px;
+  text-decoration: none;
+  align-items: stretch;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+  color: #9395a3;
 }
