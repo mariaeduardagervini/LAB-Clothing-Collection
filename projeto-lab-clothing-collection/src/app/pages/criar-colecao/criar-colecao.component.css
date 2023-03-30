@@ -1,0 +1,47 @@
+.fundo {
+  background-color: #ffffff;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 9px;
+  margin-top: 20px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+h2 {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 80px;
+  font-family: "Inter";
+  font-size: 28px;
+  font-weight: 600;
+  text-align: justify;
+}
+input {
+  color: #b4b6c1;
+  opacity: 0.6;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  width: 352px;
+  height: 43px;
+}
+form {
+  padding: 20px 60px 20px 60px;
+}
+img {
+  height: 130px;
+  position: relative;
+  left: 38%;
+}
+.alert-danger {
+  position: absolute;
+  font-size: 12px;
+  padding: 5px;
+
+  margin-top: -40px;
+}

@@ -1,1 +1,114 @@
-<p>criar-colecao works!</p>
+<h2>Criar Coleção</h2>
+<div class="fundo">
+  <form [formGroup]="cadastroColecaoForm">
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          formControlName="nome"
+          placeholder="Nome da Coleção"
+          name="nome"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroColecaoForm.get('nome')?.errors?.['required'] && cadastroColecaoForm.get('nome')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="responsavel"
+          formControlName="responsavel"
+          placeholder="Responsável pela coleção"
+          name="responsavel"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroColecaoForm.get('responsavel')?.errors?.['required'] && cadastroColecaoForm.get('responsavel')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="estacao"
+          formControlName="estacao"
+          placeholder="Para qual estação?"
+          name="estacao"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroColecaoForm.get('estacao')?.errors?.['required'] && cadastroColecaoForm.get('estacao')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="marca"
+          formControlName="marca"
+          placeholder="Para qual marca você está criando?"
+          name="marca"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroColecaoForm.get('marca')?.errors?.['required'] && cadastroColecaoForm.get('marca')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="orcamento"
+          formControlName="orcamento"
+          placeholder="Qual é o orçamento desta coleção?"
+          name="orcamento"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroColecaoForm.get('orcamento')?.errors?.['required'] && cadastroColecaoForm.get('orcamento')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="anoLancamento"
+          formControlName="anoLancamento"
+          placeholder="Ano de Lançamento"
+          name="anoLancamento"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroColecaoForm.get('anoLancamento')?.errors?.['required'] && cadastroColecaoForm.get('anoLancamento')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <img src="../../../assets/img-colecao.png" alt="Imagem coleção" />
+  </form>
+</div>
