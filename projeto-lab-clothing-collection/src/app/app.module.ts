@@ -17,6 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.component';
 import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
+import { EditarColecaoComponent } from './pages/editar-colecao/editar-colecao.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.compo
     CardComponent,
     ListaColecoesComponent,
     CriarColecaoComponent,
+    EditarColecaoComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ListaColecoesComponent } from './pages/lista-colecoes/lista-colecoes.component';
 import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
+import { EditarColecaoComponent } from './pages/editar-colecao/editar-colecao.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'lista-colecoes', component: ListaColecoesComponent },
       { path: 'criar-colecao', component: CriarColecaoComponent },
+      { path: 'editar-colecao', component: EditarColecaoComponent },
     ],
   },
 ];
