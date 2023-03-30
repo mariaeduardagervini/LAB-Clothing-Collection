@@ -1,3 +1,5 @@
 <h2>Dashboard</h2>
 
-<app-card></app-card>
+<div class="cards">
+  <app-card *ngFor="let item of cards" [cards]="item"></app-card>
+</div>

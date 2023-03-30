@@ -1,9 +1,6 @@
 .cards {
-  font-family: "Inter";
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
   margin-left: 18px;
+  font-family: "Inter";
 }
 .card {
   width: 350px;
