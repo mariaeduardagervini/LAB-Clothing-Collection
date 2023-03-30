@@ -1,4 +1,4 @@
-export interface INewColecao {
+export interface IColecao {
   id?: number;
   nome: string;
   responsavel: string;
@@ -6,7 +6,7 @@ export interface INewColecao {
   marca: string;
   orçamento: string;
 }
-export class NewColecao implements INewColecao {
+export class Colecao implements IColecao {
   id?: number;
   nome!: string;
   responsavel!: string;

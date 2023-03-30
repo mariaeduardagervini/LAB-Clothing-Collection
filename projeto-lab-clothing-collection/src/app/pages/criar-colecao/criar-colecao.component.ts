@@ -1,6 +1,6 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { NewColecao } from 'src/app/models/newColecao';
+import { Colecao } from 'src/app/models/newColecao';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,15 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./criar-colecao.component.css'],
 })
 export class CriarColecaoComponent implements OnInit {
-  newColecao: NewColecao = new NewColecao();
+  newColecao: Colecao = new Colecao();
   cadastroColecaoForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
-    this.criarColecao(new NewColecao());
+    this.criarColecao(new Colecao());
   }
-  criarColecao(newColecao: NewColecao) {
+  criarColecao(Colecao: Colecao) {
     this.cadastroColecaoForm = this.formBuilder.group({
       nome: [
         '',
