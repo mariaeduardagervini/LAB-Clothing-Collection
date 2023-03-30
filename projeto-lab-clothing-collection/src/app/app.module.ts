@@ -19,6 +19,7 @@ import { ListaColecoesComponent } from './pages/colecoes/lista-colecoes/lista-co
 import { CriarColecaoComponent } from './pages/colecoes/criar-colecao/criar-colecao.component';
 import { EditarColecaoComponent } from './pages/colecoes/editar-colecao/editar-colecao.component';
 import { ListaModelosComponent } from './pages/modelos/lista-modelos/lista-modelos.component';
+import { CriarModeloComponent } from './pages/modelos/criar-modelo/criar-modelo.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ListaModelosComponent } from './pages/modelos/lista-modelos/lista-model
     CriarColecaoComponent,
     EditarColecaoComponent,
     ListaModelosComponent,
+    CriarModeloComponent,
   ],
   imports: [
     BrowserModule,

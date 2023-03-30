@@ -11,6 +11,7 @@ import { ListaColecoesComponent } from './pages/colecoes/lista-colecoes/lista-co
 import { CriarColecaoComponent } from './pages/colecoes/criar-colecao/criar-colecao.component';
 import { EditarColecaoComponent } from './pages/colecoes/editar-colecao/editar-colecao.component';
 import { ListaModelosComponent } from './pages/modelos/lista-modelos/lista-modelos.component';
+import { CriarModeloComponent } from './pages/modelos/criar-modelo/criar-modelo.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,7 @@ const routes: Routes = [
       { path: 'criar-colecao', component: CriarColecaoComponent },
       { path: 'editar-colecao', component: EditarColecaoComponent },
       { path: 'lista-modelos', component: ListaModelosComponent },
+      { path: 'criar-modelo', component: CriarModeloComponent },
     ],
   },
 ];
