@@ -20,6 +20,7 @@ import { CriarColecaoComponent } from './pages/colecoes/criar-colecao/criar-cole
 import { EditarColecaoComponent } from './pages/colecoes/editar-colecao/editar-colecao.component';
 import { ListaModelosComponent } from './pages/modelos/lista-modelos/lista-modelos.component';
 import { CriarModeloComponent } from './pages/modelos/criar-modelo/criar-modelo.component';
+import { EditarModeloComponent } from './pages/modelos/editar-modelo/editar-modelo.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CriarModeloComponent } from './pages/modelos/criar-modelo/criar-modelo.
     EditarColecaoComponent,
     ListaModelosComponent,
     CriarModeloComponent,
+    EditarModeloComponent,
   ],
   imports: [
     BrowserModule,
