@@ -20,40 +20,34 @@
         </div>
       </div>
       <div class="col">
-        <input
-          type="text"
-          class="form-control"
+        <select
+          class="form-select"
+          aria-label="Default select example"
           id="tipo"
           formControlName="tipo"
-          placeholder="Tipo do Modelo"
-          name="tipo"
           required
-        />
-        <div
-          class="alert alert-danger"
-          *ngIf="cadastroModeloForm.get('tipo')?.errors?.['required'] && cadastroModeloForm.get('tipo')?.touched"
         >
-          Campo obrigatório!
-        </div>
+          <option value="" disabled selected>Tipo do modelo</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <input
-          type="text"
-          class="form-control"
+        <select
+          class="form-select"
+          aria-label="Default select example"
           id="colecao"
           formControlName="colecao"
-          placeholder="Selecionar coleção"
-          name="colecao"
           required
-        />
-        <div
-          class="alert alert-danger"
-          *ngIf="cadastroModeloForm.get('colecao')?.errors?.['required'] && cadastroModeloForm.get('colecao')?.touched"
         >
-          Campo obrigatório!
-        </div>
+          <option value="" disabled selected>Selecionar coleção</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
       <div class="col">
         <input
@@ -75,37 +69,57 @@
     </div>
     <div class="row">
       <div class="col">
-        <input
-          type="text"
-          class="form-control"
-          id="bordado"
-          formControlName="bordado"
-          placeholder="Possui bordado?"
-          name="bordado"
-          required
-        />
-        <div
-          class="alert alert-danger"
-          *ngIf="cadastroModeloForm.get('bordado')?.errors?.['required'] && cadastroModeloForm.get('bordado')?.touched"
-        >
-          Campo obrigatório!
+        <div class="form-check form-check-inline">
+          <p>Possui bordado?</p>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="bordado"
+            id="bordado-true"
+            value="bordado-true"
+            formControlName="bordado"
+            required
+          />
+          <label class="form-check-label radio" for="bordado-true">Sim</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="bordado"
+            id="bordado-false"
+            value="bordado-false"
+            formControlName="bordado"
+            required
+          />
+          <label class="form-check-label radio" for="bordado-false">Não</label>
         </div>
       </div>
       <div class="col">
-        <input
-          type="text"
-          class="form-control"
-          id="estampa"
-          formControlName="estampa"
-          placeholder="Possui estampa?	"
-          name="estampa"
-          required
-        />
-        <div
-          class="alert alert-danger"
-          *ngIf="cadastroModeloForm.get('estampa')?.errors?.['required'] && cadastroModeloForm.get('estampa')?.touched"
-        >
-          Campo obrigatório!
+        <div class="form-check form-check-inline">
+          <p>Possui estampa?</p>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="estampa"
+            id="estampa-true"
+            value="estampa-true"
+            formControlName="estampa"
+            required
+          />
+          <label class="form-check-label radio" for="estampa-true">Sim</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="estampa"
+            id="estampa-false"
+            value="estampa-false"
+            formControlName="estampa"
+            required
+          />
+          <label class="form-check-label radio" for="estampa-false">Não</label>
         </div>
       </div>
     </div>

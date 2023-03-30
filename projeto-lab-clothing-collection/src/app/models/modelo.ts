@@ -4,8 +4,8 @@ export interface IModelo {
   responsavel: string;
   tipo: string;
   colecao: string;
-  bordado: string;
-  estampa: string;
+  bordado: boolean;
+  estampa: boolean;
 }
 export class Modelo implements IModelo {
   id?: number;
@@ -13,6 +13,6 @@ export class Modelo implements IModelo {
   responsavel!: string;
   tipo!: string;
   colecao!: string;
-  bordado!: string;
-  estampa!: string;
+  bordado!: boolean;
+  estampa!: boolean;
 }
