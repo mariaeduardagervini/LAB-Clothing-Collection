@@ -10,36 +10,41 @@ h2 {
 .cards {
   display: flex;
   flex-direction: row;
-  justify-items: stretch;
-  gap: 25px;
+  gap: 15px;
   margin-left: 2%;
-  margin-right: 1%;
+  margin-right: 2%;
 }
 .tabela {
   background-color: #ffffff;
   height: 350px;
   display: flex;
   flex-direction: column;
-
-  padding: 30px;
+  flex-wrap: nowrap;
+  padding: 20px;
   gap: 10px;
   border-radius: 9px;
   margin-top: 20px;
   margin-left: 2%;
   margin-right: 2%;
 }
+
 p {
+  text-align: justify;
   font-weight: 600;
   font-size: 20px;
   margin-left: 5px;
 }
 
 th {
+  align-items: stretch;
+  text-align: justify;
   color: #2c2c2c;
   font-weight: 500;
   font-size: 18px;
 }
 tr {
+  align-items: stretch;
+  text-align: justify;
   font-weight: 400;
   font-size: 16px;
   color: #9395a3;

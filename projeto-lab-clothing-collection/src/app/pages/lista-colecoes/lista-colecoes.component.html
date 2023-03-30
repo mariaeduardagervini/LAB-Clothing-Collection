@@ -1,1 +1,26 @@
-<p>lista-colecoes works!</p>
+<div class="titulo">
+  <h2>Coleções</h2>
+  <app-botao [btnConfigs]="criar" (click)="criarColecao()"></app-botao>
+</div>
+<div class="tabela-colecao">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Coleção</th>
+        <th scope="col">Responsável</th>
+        <th scope="col">Estação-Lançamento</th>
+        <th scope="col">Modelos</th>
+        <th scope="col">Orçamento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adidas</td>
+        <td>Maria Eduarda</td>
+        <td>Inverno 2023</td>
+        <td>10</td>
+        <td>R$ 9.500,00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

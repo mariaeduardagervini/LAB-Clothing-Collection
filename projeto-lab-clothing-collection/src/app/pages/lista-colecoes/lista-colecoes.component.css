@@ -1,0 +1,44 @@
+.titulo {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.tabela-colecao {
+  background-color: #ffffff;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 9px;
+  margin-top: 20px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+h2 {
+  font-family: "Inter";
+  font-size: 28px;
+  font-weight: 600;
+  text-align: justify;
+}
+
+th {
+  align-items: stretch;
+  text-align: justify;
+  color: #2c2c2c;
+  font-weight: 500;
+  font-size: 18px;
+}
+tr {
+  align-items: stretch;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+  color: #9395a3;
+}
+tbody tr {
+  line-height: 55px;
+}
