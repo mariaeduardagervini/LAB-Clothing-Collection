@@ -32,7 +32,7 @@ const routes: Routes = [
       { path: 'lista-colecoes', component: ListaColecoesComponent },
       { path: 'criar-colecao', component: CriarColecaoComponent },
       { path: 'editar-colecao', component: EditarColecaoComponent },
-      { path: 'lista-colecao', component: ListaModelosComponent },
+      { path: 'lista-modelos', component: ListaModelosComponent },
     ],
   },
 ];
