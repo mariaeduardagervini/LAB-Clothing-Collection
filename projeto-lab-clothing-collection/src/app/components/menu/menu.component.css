@@ -2,18 +2,19 @@
   font-family: "Inter";
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
   color: #a4a4a4;
+  position: relative;
 }
 img {
-  position: relative;
-  left: 70px;
   height: 32px;
-  margin-bottom: 203px;
+  left: 80px;
+  bottom: 30px;
 }
 p {
   color: #b4b6c1;
-  margin-bottom: 50px;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  left: 17%;
 }
 
 button {
@@ -22,13 +23,6 @@ button {
   height: 50px;
   background-color: #4c68ff;
   margin-bottom: 30px;
-}
-
-.menu {
-  padding: 30px;
-  margin-top: 58px;
-  margin-left: 40px;
-  width: 380px;
-  height: 100%;
-  border-right: 1.5px solid #b4b6c186;
+  left: 13px;
+  margin-right: 8px;
 }

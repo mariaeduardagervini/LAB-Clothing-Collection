@@ -14,6 +14,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthUserGuard } from './services/guards/auth-user.guard';
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HeaderComponent } from './components/header/header.component';
     DashboardComponent,
     MenuComponent,
     HeaderComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
