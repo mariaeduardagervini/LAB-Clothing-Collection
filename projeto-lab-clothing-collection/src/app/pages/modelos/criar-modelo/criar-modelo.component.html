@@ -1,1 +1,116 @@
-<p>criar-modelo works!</p>
+<h2>Criar Modelo</h2>
+<div class="fundo">
+  <form [formGroup]="cadastroModeloForm">
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          formControlName="nome"
+          placeholder="Nome do Modelo"
+          name="nome"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroModeloForm.get('nome')?.errors?.['required'] && cadastroModeloForm.get('nome')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="tipo"
+          formControlName="tipo"
+          placeholder="Tipo do Modelo"
+          name="tipo"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroModeloForm.get('tipo')?.errors?.['required'] && cadastroModeloForm.get('tipo')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="colecao"
+          formControlName="colecao"
+          placeholder="Selecionar coleção"
+          name="colecao"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroModeloForm.get('colecao')?.errors?.['required'] && cadastroModeloForm.get('colecao')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="responsavel"
+          formControlName="responsavel"
+          placeholder="Responsável pelo modelo"
+          name="responsavel"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroModeloForm.get('responsavel')?.errors?.['required'] && cadastroModeloForm.get('responsavel')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="bordado"
+          formControlName="bordado"
+          placeholder="Possui bordado?"
+          name="bordado"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroModeloForm.get('bordado')?.errors?.['required'] && cadastroModeloForm.get('bordado')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="estampa"
+          formControlName="estampa"
+          placeholder="Possui estampa?	"
+          name="estampa"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="cadastroModeloForm.get('estampa')?.errors?.['required'] && cadastroModeloForm.get('estampa')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <img src="../../../assets/img-colecao.png" alt="Imagem coleção" />
+  </form>
+  <app-botao [btnConfigs]="salvarModelo" (click)="onSubmit()"></app-botao>
+  <app-botao [btnConfigs]="cancelarModelo" (click)="cancelar()"></app-botao>
+</div>

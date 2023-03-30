@@ -1,6 +1,6 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { Colecao } from 'src/app/models/newColecao';
+import { Colecao } from 'src/app/models/colecao';
 import { Router } from '@angular/router';
 
 @Component({
