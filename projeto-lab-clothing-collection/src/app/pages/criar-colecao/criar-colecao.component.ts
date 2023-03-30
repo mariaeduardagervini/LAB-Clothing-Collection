@@ -59,6 +59,7 @@ export class CriarColecaoComponent implements OnInit {
       top: '',
       left: '',
       margin: '405px 5px 15px 720px',
+      border: 'none',
     },
   };
 

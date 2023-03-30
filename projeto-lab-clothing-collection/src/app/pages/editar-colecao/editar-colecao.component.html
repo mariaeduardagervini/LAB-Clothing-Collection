@@ -1,1 +1,117 @@
-<p>editar-colecao works!</p>
+<h2>Criar Coleção</h2>
+<div class="fundo">
+  <form [formGroup]="editarColecaoForm">
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          formControlName="nome"
+          placeholder="Nome da Coleção"
+          name="nome"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="editarColecaoForm.get('nome')?.errors?.['required'] && editarColecaoForm.get('nome')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="responsavel"
+          formControlName="responsavel"
+          placeholder="Responsável pela coleção"
+          name="responsavel"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="editarColecaoForm.get('responsavel')?.errors?.['required'] && editarColecaoForm.get('responsavel')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="estacao"
+          formControlName="estacao"
+          placeholder="Para qual estação?"
+          name="estacao"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="editarColecaoForm.get('estacao')?.errors?.['required'] && editarColecaoForm.get('estacao')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="marca"
+          formControlName="marca"
+          placeholder="Para qual marca você está criando?"
+          name="marca"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="editarColecaoForm.get('marca')?.errors?.['required'] && editarColecaoForm.get('marca')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="orcamento"
+          formControlName="orcamento"
+          placeholder="Qual é o orçamento desta coleção?"
+          name="orcamento"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="editarColecaoForm.get('orcamento')?.errors?.['required'] && editarColecaoForm.get('orcamento')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="anoLancamento"
+          formControlName="anoLancamento"
+          placeholder="Ano de Lançamento"
+          name="anoLancamento"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="editarColecaoForm.get('anoLancamento')?.errors?.['required'] && editarColecaoForm.get('anoLancamento')?.touched"
+        >
+          Campo obrigatório!
+        </div>
+      </div>
+    </div>
+    <img src="../../../assets/img-colecao.png" alt="Imagem coleção" />
+  </form>
+  <app-botao [btnConfigs]="excluirColecao" (click)="excluir()"></app-botao>
+  <app-botao [btnConfigs]="salvarColecao" (click)="onSubmit()"></app-botao>
+  <app-botao [btnConfigs]="cancelarColecao" (click)="cancelar()"></app-botao>
+</div>
