@@ -1,20 +1,19 @@
 .fundo {
   background-color: #ffffff;
-  height: 500px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 20px;
   gap: 10px;
   border-radius: 9px;
-  margin-top: 20px;
   margin-left: 3%;
   margin-right: 3%;
 }
 h2 {
   margin-top: 40px;
   margin-left: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   font-family: "Inter";
   font-size: 28px;
   font-weight: 600;
@@ -37,11 +36,11 @@ img {
   height: 130px;
   position: relative;
   left: 38%;
+  bottom: 13px;
 }
 .alert-danger {
   position: absolute;
   font-size: 12px;
   padding: 5px;
-
   margin-top: -40px;
 }

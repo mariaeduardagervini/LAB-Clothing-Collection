@@ -1,6 +1,7 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { NewColecao } from 'src/app/models/newColecao';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-criar-colecao',
@@ -11,7 +12,7 @@ export class CriarColecaoComponent implements OnInit {
   newColecao: NewColecao = new NewColecao();
   cadastroColecaoForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.criarColecao(new NewColecao());
@@ -37,5 +38,34 @@ export class CriarColecaoComponent implements OnInit {
       orcamento: ['', Validators.required],
       anoLancamento: ['', Validators.required],
     });
+  }
+  salvarColecao = {
+    titulo: 'Salvar',
+    styles: {
+      width: '180px',
+      position: 'absolute',
+      top: '',
+      left: '',
+      margin: '405px 5px 15px 950px',
+    },
+  };
+  cancelarColecao = {
+    titulo: 'Cancelar',
+    styles: {
+      color: '#A098AE',
+      backgroundColor: '#EBEBEB',
+      width: '180px',
+      position: 'absolute',
+      top: '',
+      left: '',
+      margin: '405px 5px 15px 720px',
+    },
+  };
+
+  onSubmit() {
+    this.router.navigate(['/lista-colecoes']);
+  }
+  cancelar() {
+    this.router.navigate(['/lista-colecoes']);
   }
 }

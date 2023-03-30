@@ -111,4 +111,6 @@
     </div>
     <img src="../../../assets/img-colecao.png" alt="Imagem coleção" />
   </form>
+  <app-botao [btnConfigs]="salvarColecao" (click)="onSubmit()"></app-botao>
+  <app-botao [btnConfigs]="cancelarColecao" (click)="cancelar()"></app-botao>
 </div>
