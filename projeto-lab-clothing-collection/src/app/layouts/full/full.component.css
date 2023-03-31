@@ -1,14 +1,13 @@
 .full {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 120px 700px;
+  grid-template-rows: 100px 88vh;
 }
 header {
   background-color: #ffffff;
   grid-column-start: 2;
   grid-template-columns: 3;
-  border-left: 1px solid #e2dddd;
-  box-shadow: #e2dddd -1px -1px;
+  box-shadow: #e2dddd45 -3px -3px;
 }
 aside {
   background-color: #ffffff;
@@ -16,8 +15,8 @@ aside {
 }
 
 main {
-  box-shadow: #e2dddd -1px -1px;
   background-color: #f9f9f9;
+  box-shadow: #e2dddd62 -3px -3px;
   grid-column-start: 2;
   grid-template-columns: 3;
 }

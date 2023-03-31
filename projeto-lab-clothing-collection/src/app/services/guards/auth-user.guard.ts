@@ -22,12 +22,12 @@ export class AuthUserGuard implements CanActivate {
     | boolean
     | UrlTree {
     const returnLocalStorage = localStorage.getItem('logged');
-    const returnLogged = JSON.parse(returnLocalStorage!);
-    if (!returnLogged) {
+    const returnLogado = JSON.parse(returnLocalStorage!);
+    if (!returnLogado) {
       this.router.navigate(['/login']);
-      return returnLogged;
+      return returnLogado;
     } else {
-      return returnLogged;
+      return returnLogado;
     }
   }
 }

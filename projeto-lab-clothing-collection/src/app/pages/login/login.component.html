@@ -1,5 +1,8 @@
 <form [formGroup]="loginForm" (submit)="login()">
   <h2 class="header">Sign In</h2>
+  <div class="alert alert-primary" *ngIf="this.exibirMsg">
+    ERRO! E-mail e/ou Senha não conferem!
+  </div>
 
   <p class="sub-header">Insira suas credenciais para acessar sua conta</p>
 
@@ -8,7 +11,7 @@
       type="email"
       class="form-control"
       id="email"
-      formControlName="loginEmail"
+      formControlName="email"
       placeholder="Informe o seu e-mail"
       name="email"
       required
@@ -16,13 +19,13 @@
     <label for="email">Informe seu e-mail</label>
     <div
       class="alert alert-danger"
-      *ngIf="loginForm.get('loginEmail')?.errors?.['required'] && loginForm.get('loginEmail')?.touched"
+      *ngIf="loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched"
     >
       O e-mail é obrigatório!
     </div>
     <div
       class="alert alert-danger"
-      *ngIf="loginForm.get('loginEmail')?.errors?.['pattern'] && loginForm.get('loginEmail')?.touched"
+      *ngIf="loginForm.get('email')?.errors?.['pattern'] && loginForm.get('email')?.touched"
     >
       E-mail inválido!
     </div>
@@ -33,7 +36,7 @@
       type="password"
       class="form-control"
       id="senha"
-      formControlName="loginSenha"
+      formControlName="senha"
       placeholder="Informe sua senha"
       name="senha"
       required
@@ -41,7 +44,13 @@
     <label for="senha">Informe sua senha</label>
     <div
       class="alert alert-danger"
-      *ngIf="loginForm.get('loginSenha')?.errors?.['pattern'] && loginForm.get('loginSenha')?.touched"
+      *ngIf="loginForm.get('senha')?.errors?.['required'] && loginForm.get('senha')?.touched"
+    >
+      A senha é obrigatória!
+    </div>
+    <div
+      class="invalid-feedback"
+      *ngIf="loginForm.get('senha')?.errors?.['pattern'] && loginForm.get('senha')?.touched"
     >
       A senha precisa ter 8 caracteres! E ao menos uma letra maiúscula, uma
       minúscula, um número e um caractere especial!

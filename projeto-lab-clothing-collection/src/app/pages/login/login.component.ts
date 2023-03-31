@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Usuario } from 'src/app/models/usuario';
+import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -10,95 +9,71 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  usuario: Usuario = new Usuario();
   loginForm!: FormGroup;
   emailPattern: string =
     '^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+).(.[a-z]{2,3})$';
   senhaPattern: string = '(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{8}';
-  listaUsuarios: Usuario[] = [];
+  exibirMsg: boolean = false;
 
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
-    private service: UsuarioService,
-    private route: ActivatedRoute
+    private service: UsuarioService
   ) {}
   ngOnInit(): void {
-    this.newForm(new Usuario());
+    this.newForm();
     this.criarLocalStorage(false);
   }
-
-  newForm(usuario: Usuario) {
+  newForm() {
     this.loginForm = this.formBuilder.group({
-      loginEmail: [
+      email: [
         '',
-        Validators.compose([
+        [
           Validators.required,
+          Validators.minLength(5),
           Validators.pattern(this.emailPattern),
-        ]),
+        ],
       ],
-      loginSenha: [
+      senha: [
         '',
-        Validators.compose([
+        [
           Validators.required,
           Validators.minLength(8),
           Validators.pattern(this.senhaPattern),
-        ]),
+        ],
       ],
     });
   }
-  get loginEmail() {
-    return this.loginForm.get('loginEmail')?.value;
-  }
-  get loginSenha() {
-    return this.loginForm.get('loginSenha')?.value;
-  }
+
   criarLocalStorage(status: boolean) {
     localStorage.setItem('logged', `${status}`);
   }
-
-  getListaUsuarios() {
-    this.service.acessarUsuarios().subscribe((usuarios) => {
-      this.listaUsuarios = usuarios;
-    });
-  }
-
-  validarUsuario() {
-    this.listaUsuarios.find((usuario) => {
-      if (usuario.email === this.loginEmail.value) {
-        this.usuario = usuario;
-      }
-    });
-    if (this.usuario.email === undefined && this.loginEmail.value === null) {
-      this.loginEmail.setErrors({ required: true });
-      this.loginEmail.markAsTouched();
-      return false;
-    } else if (
-      this.usuario.email === undefined &&
-      this.loginEmail.value != null
-    ) {
-      this.loginEmail.setErrors({ invalid: true });
-      this.loginEmail.markAsTouched();
-      return false;
-    } else {
-      return true;
-    }
-  }
-
-  verificarSenha() {
-    if (this.usuario.senha === this.loginSenha.value) {
-      return true;
-    } else {
-      return false;
-    }
+  alert() {
+    this.exibirMsg = !this.exibirMsg;
   }
 
   login() {
-    //if (this.validarUsuario() === true) {
-    console.log('autenticado');
-    this.router.navigate(['/dashboard']);
-    // } else {
-    // console.log('não autenticado');
-    // }
+    this.service.acessarUsuarios().subscribe(
+      (usuarios) => {
+        const usuario = usuarios.find((a: any) => {
+          return (
+            a.email === this.loginForm.value.email &&
+            a.senha === this.loginForm.value.senha
+          );
+        });
+        if (usuario) {
+          this.criarLocalStorage(true);
+          this.router.navigate(['/dashboard']);
+        } else {
+          this.alert();
+          this.criarLocalStorage(false);
+        }
+      },
+      (err) => {
+        this.alert();
+        alert('Algo está errado!');
+        this.criarLocalStorage(false);
+      }
+    );
   }
 }

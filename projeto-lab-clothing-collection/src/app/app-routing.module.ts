@@ -28,7 +28,7 @@ const routes: Routes = [
   {
     path: '',
     component: FullComponent,
-    //canActivate: [AuthUserGuard],
+    canActivate: [AuthUserGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'lista-colecoes', component: ListaColecoesComponent },

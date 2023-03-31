@@ -103,3 +103,8 @@ a {
   text-decoration: none;
   font-weight: 500;
 }
+.alert-primary {
+  position: absolute;
+  top: -40px;
+  left: 75px;
+}
