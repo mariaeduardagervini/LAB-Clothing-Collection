@@ -9,6 +9,15 @@ export class DashboardComponent {
   cards = [
     { titulo: 'Coleções', valor: 0 },
     { titulo: 'Modelos', valor: 0 },
-    { titulo: 'Orçamento Médio (R$)', valor: 0 },
+    {
+      titulo: 'Orçamento Médio (R$)',
+      valor: 0,
+      styles: {
+        backgroundImage: 'url(../../../assets/icone-orcamento.png)',
+        position: 'absolute',
+        backgroundPosition: '10px 45px',
+        backgroundRepeat: 'no-repeat',
+      },
+    },
   ];
 }
