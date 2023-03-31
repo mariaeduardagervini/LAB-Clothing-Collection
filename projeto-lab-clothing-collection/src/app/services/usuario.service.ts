@@ -17,4 +17,7 @@ export class UsuarioService {
   cadastrarUsuarios(usuarios: Usuario): Observable<Usuario[]> {
     return this.http.post<Usuario[]>(`${API_PATH}/usuarios`, usuarios);
   }
+  sairConta() {
+    return localStorage.clear();
+  }
 }
