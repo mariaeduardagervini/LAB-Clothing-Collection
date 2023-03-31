@@ -46,7 +46,7 @@ export class EditarModeloComponent implements OnInit {
       position: 'absolute',
       top: '',
       left: '',
-      margin: '405px 5px 15px 950px',
+      margin: '405px 5px 15px 75%',
     },
   };
   cancelarModelo = {
@@ -58,7 +58,7 @@ export class EditarModeloComponent implements OnInit {
       position: 'absolute',
       top: '',
       left: '',
-      margin: '405px 5px 15px 720px',
+      margin: '405px 5px 15px 60%',
       border: 'none',
     },
   };
