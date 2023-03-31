@@ -47,6 +47,7 @@
           class="form-control"
           id="cnpj"
           placeholder="CNPJ"
+          maxlength="14"
           formControlName="cnpj"
           required
         />
@@ -59,7 +60,7 @@
         </div>
         <div
           class="alert alert-danger"
-          *ngIf="cadastroForm.get('cnpj')?.errors?.['validaCNPJ'] && cadastroForm.get('cnpj')?.touched"
+          *ngIf="cadastroForm.get('cnpj')?.errors?.['maxLength'] && cadastroForm.get('cnpj')?.touched"
         >
           O CNPJ não é válido!
         </div>

@@ -13,4 +13,8 @@ export class UsuarioService {
   acessarUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(`${API_PATH}/usuarios`);
   }
+
+  cadastrarUsuarios(usuarios: Usuario): Observable<Usuario[]> {
+    return this.http.post<Usuario[]>(`${API_PATH}/usuarios`, usuarios);
+  }
 }
