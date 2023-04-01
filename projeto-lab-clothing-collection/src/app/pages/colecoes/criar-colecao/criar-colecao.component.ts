@@ -2,6 +2,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Colecao } from 'src/app/models/colecao';
 import { Router } from '@angular/router';
+import { ColecoesService } from 'src/app/services/colecoes.service';
 
 @Component({
   selector: 'app-criar-colecao',
@@ -12,7 +13,11 @@ export class CriarColecaoComponent implements OnInit {
   newColecao: Colecao = new Colecao();
   cadastroColecaoForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private service: ColecoesService
+  ) {}
 
   ngOnInit(): void {
     this.criarColecao(new Colecao());
@@ -64,7 +69,9 @@ export class CriarColecaoComponent implements OnInit {
   };
 
   onSubmit() {
-    this.router.navigate(['/lista-colecoes']);
+    this.service.criar(this.cadastroColecaoForm.value).subscribe(() => {
+      this.router.navigate(['/lista-colecoes']);
+    });
   }
   cancelar() {
     this.router.navigate(['/lista-colecoes']);

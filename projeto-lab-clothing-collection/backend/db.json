@@ -54,11 +54,11 @@
       "id": 1,
       "nome": "Sportswear French",
       "responsavel": "Maria",
-      "qtdModelos": 2,
-      "marca": "Nike",
       "estacao": "Verão 2023",
-      "orcamento": 7500,
-      "anoLancamento": 2023
+      "marca": "Nike",
+      "qtdModelos": 2,
+      "orcamento": "7500",
+      "anoLancamento": "2023"
     },
     {
       "id": 2,
