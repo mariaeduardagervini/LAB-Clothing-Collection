@@ -14,59 +14,83 @@
   "modelos": [
     {
       "id": 1,
-      "nome": "Saias",
+      "nome": "Saia Plissada",
+      "responsavel": "Maria",
       "colecao": 1
     },
     {
       "id": 2,
-      "nome": "Vestidos",
+      "nome": "Vestido Midi",
+      "responsavel": "Maria",
       "colecao": 1
     },
     {
       "id": 3,
-      "nome": "Calças",
+      "nome": "Calça Legging",
+      "responsavel": "Maria",
       "colecao": 1
     },
     {
       "id": 4,
-      "nome": "Shorts e Bermudas",
+      "nome": "Shorts de Malha",
+      "responsavel": "Maria",
       "colecao": 1
     },
     {
       "id": 5,
-      "nome": "Camisetas",
+      "nome": "Camiseta de Algodão",
+      "responsavel": "Maria",
       "colecao": 1
     },
     {
       "id": 6,
-      "nome": "Jaquetas",
+      "nome": "Jaqueta de Couro",
+      "responsavel": "Maria",
       "colecao": 1
     }
   ],
   "colecoes": [
     {
       "id": 1,
-      "nome": "Nike"
+      "nome": "Nike",
+      "responsavel": "Maria",
+      "qtdModelos": "2",
+      "orçamento": 8500
     },
     {
       "id": 2,
-      "nome": "Adidas"
+      "nome": "Adidas",
+      "responsavel": "Maria",
+      "qtdModelos": "2",
+      "orçamento": 8500
     },
     {
       "id": 3,
-      "nome": "Osklen"
+      "nome": "Osklen",
+      "responsavel": "Maria",
+      "qtdModelos": "6",
+      "orçamento": 8500
     },
     {
       "id": 4,
-      "nome": "Renner"
+      "nome": "Renner",
+      "responsavel": "Maria",
+      "qtdModelos": "3",
+      "orçamento": 6500
     },
     {
       "id": 5,
-      "nome": "Farm"
+      "nome": "Farm",
+      "responsavel": "Maria",
+      "qtdModelos": "5",
+      "orçamento": 5500
     },
     {
       "id": 6,
-      "nome": "Zara"
+      "nome": "Zara",
+      "responsavel": "Maria",
+      "qtdModelos": "1",
+      "orçamento": 3500
     }
   ]
 }
