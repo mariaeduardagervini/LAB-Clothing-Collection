@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Colecao } from 'src/app/models/colecao';
+import { ColecoesService } from 'src/app/services/colecoes.service';
 
 @Component({
   selector: 'app-editar-colecao',
@@ -9,34 +10,54 @@ import { Colecao } from 'src/app/models/colecao';
   styleUrls: ['./editar-colecao.component.css'],
 })
 export class EditarColecaoComponent implements OnInit {
-  changeColecao: Colecao = new Colecao();
+  colecao: Colecao = {
+    id: 0,
+    nome: '',
+    responsavel: '',
+    estacao: '',
+    marca: '',
+    qtdModelos: 0,
+    orcamento: 0,
+    anoLancamento: 0,
+  };
+
   editarColecaoForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private service: ColecoesService
+  ) {}
 
   ngOnInit(): void {
-    this.editarColecao(new Colecao());
+    this.editarColecao();
   }
-  editarColecao(editarColecao: Colecao) {
-    this.editarColecaoForm = this.formBuilder.group({
-      nome: [
-        '',
-        Validators.compose([Validators.required, Validators.minLength(2)]),
-      ],
-      responsavel: [
-        '',
-        Validators.compose([Validators.required, Validators.minLength(3)]),
-      ],
-      estacao: [
-        '',
-        Validators.compose([Validators.required, Validators.minLength(3)]),
-      ],
-      marca: [
-        '',
-        Validators.compose([Validators.required, Validators.minLength(2)]),
-      ],
-      orcamento: ['', Validators.required],
-      anoLancamento: ['', Validators.required],
+  editarColecao() {
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.service.searchId(parseInt(id!)).subscribe((colecao) => {
+      this.editarColecaoForm = this.formBuilder.group({
+        id: [colecao.id],
+        nome: [
+          colecao.nome,
+          Validators.compose([Validators.required, Validators.minLength(2)]),
+        ],
+        responsavel: [
+          colecao.responsavel,
+          Validators.compose([Validators.required, Validators.minLength(3)]),
+        ],
+        estacao: [
+          colecao.estacao,
+          Validators.compose([Validators.required, Validators.minLength(3)]),
+        ],
+        marca: [
+          colecao.marca,
+          Validators.compose([Validators.required, Validators.minLength(2)]),
+        ],
+        qtdModelos: [colecao.qtdModelos],
+        orcamento: [colecao.orcamento, Validators.required],
+        anoLancamento: [colecao.anoLancamento, Validators.required],
+      });
     });
   }
   salvarColecao = {
@@ -71,18 +92,23 @@ export class EditarColecaoComponent implements OnInit {
       position: 'absolute',
       top: '',
       left: '',
-      margin: '405px 5px 15px 370px',
+      margin: '405px 5px 15px 30%',
       border: 'none',
     },
   };
 
   onSubmit() {
-    this.router.navigate(['/lista-colecoes']);
+    this.service.editar(this.editarColecaoForm.value).subscribe(() => {
+      this.router.navigate(['/lista-colecoes']);
+    });
   }
+
   cancelar() {
     this.router.navigate(['/lista-colecoes']);
   }
-  excluir() {
-    this.router.navigate(['/lista-colecoes']);
+
+  excluir(): void {
+    const newId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.router.navigate([`/excluir-colecao/${newId}`]);
   }
 }

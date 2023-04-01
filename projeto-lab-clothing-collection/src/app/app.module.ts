@@ -21,6 +21,7 @@ import { EditarColecaoComponent } from './pages/colecoes/editar-colecao/editar-c
 import { ListaModelosComponent } from './pages/modelos/lista-modelos/lista-modelos.component';
 import { CriarModeloComponent } from './pages/modelos/criar-modelo/criar-modelo.component';
 import { EditarModeloComponent } from './pages/modelos/editar-modelo/editar-modelo.component';
+import { ExcluirColecaoComponent } from './pages/colecoes/excluir-colecao/excluir-colecao.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { EditarModeloComponent } from './pages/modelos/editar-modelo/editar-mode
     ListaModelosComponent,
     CriarModeloComponent,
     EditarModeloComponent,
+    ExcluirColecaoComponent,
   ],
   imports: [
     BrowserModule,

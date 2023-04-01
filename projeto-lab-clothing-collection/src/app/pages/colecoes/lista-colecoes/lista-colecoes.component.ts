@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Colecao } from 'src/app/models/colecao';
 import { ColecoesService } from 'src/app/services/colecoes.service';

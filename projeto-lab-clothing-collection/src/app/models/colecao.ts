@@ -6,6 +6,7 @@ export interface IColecao {
   marca?: string;
   qtdModelos: number;
   orcamento: number;
+  anoLancamento?: number;
 }
 export class Colecao implements IColecao {
   id?: number;
@@ -15,4 +16,5 @@ export class Colecao implements IColecao {
   marca!: string;
   qtdModelos!: number;
   orcamento!: number;
+  anoLancamento?: number;
 }

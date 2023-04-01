@@ -1,6 +1,6 @@
 <h2>Editar Coleção</h2>
 <div class="fundo">
-  <form [formGroup]="editarColecaoForm">
+  <form [formGroup]="editarColecaoForm" *ngIf="editarColecaoForm">
     <div class="row">
       <div class="col">
         <input
@@ -111,7 +111,7 @@
     </div>
     <img src="../../../assets/img-colecao.png" alt="Imagem coleção" />
   </form>
-  <app-botao [btnConfigs]="excluirColecao" (click)="excluir()"></app-botao>
+  <app-botao [btnConfigs]="excluirColecao" (click)="excluir()"> ></app-botao>
   <app-botao [btnConfigs]="salvarColecao" (click)="onSubmit()"></app-botao>
   <app-botao [btnConfigs]="cancelarColecao" (click)="cancelar()"></app-botao>
 </div>

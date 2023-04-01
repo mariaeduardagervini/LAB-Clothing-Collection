@@ -13,6 +13,7 @@ import { EditarColecaoComponent } from './pages/colecoes/editar-colecao/editar-c
 import { ListaModelosComponent } from './pages/modelos/lista-modelos/lista-modelos.component';
 import { CriarModeloComponent } from './pages/modelos/criar-modelo/criar-modelo.component';
 import { EditarModeloComponent } from './pages/modelos/editar-modelo/editar-modelo.component';
+import { ExcluirColecaoComponent } from './pages/colecoes/excluir-colecao/excluir-colecao.component';
 
 const routes: Routes = [
   {
@@ -33,10 +34,11 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'lista-colecoes', component: ListaColecoesComponent },
       { path: 'criar-colecao', component: CriarColecaoComponent },
-      { path: 'editar-colecao', component: EditarColecaoComponent },
+      { path: 'editar-colecao/:id', component: EditarColecaoComponent },
+      { path: 'excluir-colecao/:id', component: ExcluirColecaoComponent },
       { path: 'lista-modelos', component: ListaModelosComponent },
       { path: 'criar-modelo', component: CriarModeloComponent },
-      { path: 'editar-modelo', component: EditarModeloComponent },
+      { path: 'editar-modelo/:id', component: EditarModeloComponent },
     ],
   },
 ];

@@ -52,51 +52,53 @@
   "colecoes": [
     {
       "id": 1,
-      "nome": "Nike",
+      "nome": "Sportswear French",
       "responsavel": "Maria",
       "qtdModelos": 2,
+      "marca": "Nike",
       "estacao": "Verão 2023",
-      "orcamento": 7500
+      "orcamento": 7500,
+      "anoLancamento": 2023
     },
     {
       "id": 2,
-      "nome": "Adidas",
+      "nome": "Always Original",
       "responsavel": "Maria",
       "qtdModelos": 2,
+      "marca": "Adidas",
       "estacao": "Verão 2023",
-      "orcamento": 6000
+      "orcamento": 6000,
+      "anoLancamento": 2023
     },
     {
       "id": 3,
-      "nome": "Osklen",
+      "nome": "Jardins Tropicais",
       "responsavel": "Maria",
       "qtdModelos": 6,
+      "marca": "Osklen",
       "estacao": "Verão 2023",
-      "orcamento": 8000
+      "orcamento": 8000,
+      "anoLancamento": 2023
     },
     {
       "id": 4,
-      "nome": "Renner",
+      "nome": "Primavera Verão",
       "responsavel": "Maria",
       "qtdModelos": 3,
+      "marca": "Renner",
       "estacao": "Verão 2023",
-      "orcamento": 6500
+      "orcamento": 6500,
+      "anoLancamento": 2023
     },
     {
       "id": 5,
-      "nome": "Farm",
+      "nome": "Doce Arara",
       "responsavel": "Maria",
+      "estacao": "Verão 2023",
+      "marca": "Farm",
       "qtdModelos": 5,
-      "estacao": "Verão 2023",
-      "orcamento": 5500
-    },
-    {
-      "id": 6,
-      "nome": "Zara",
-      "responsavel": "Maria",
-      "qtdModelos": 1,
-      "estacao": "Verão 2023",
-      "orcamento": 3500
+      "orcamento": 5500,
+      "anoLancamento": 2023
     }
   ]
 }

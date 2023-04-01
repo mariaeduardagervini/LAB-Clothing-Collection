@@ -16,19 +16,29 @@
     <tbody>
       <tr *ngFor="let colecao of listaColecoes">
         <td>
-          <a routerLink="/editar-colecao">{{ colecao.nome }}</a>
+          <a routerLink="/editar-colecao/{{ colecao.id }}">
+            {{ colecao.nome }}</a
+          >
         </td>
         <td>
-          <a routerLink="/editar-colecao">{{ colecao.responsavel }}</a>
+          <a routerLink="/editar-colecao/{{ colecao.id }}">
+            {{ colecao.responsavel }}</a
+          >
         </td>
         <td>
-          <a routerLink="/editar-colecao">{{ colecao.estacao }}</a>
+          <a routerLink="/editar-colecao/{{ colecao.id }}">
+            {{ colecao.estacao }}
+          </a>
         </td>
         <td>
-          <a routerLink="/editar-colecao">{{ colecao.qtdModelos }}</a>
+          <a routerLink="//editar-colecao/{{ colecao.id }}">
+            {{ colecao.qtdModelos }}</a
+          >
         </td>
         <td>
-          <a routerLink="/editar-colecao">{{ colecao.orcamento }}</a>
+          <a routerLink="/editar-colecao/{{ colecao.id }}">
+            {{ colecao.orcamento }}
+          </a>
         </td>
       </tr>
     </tbody>
