@@ -3,7 +3,7 @@ export interface IModelo {
   nome: string;
   responsavel: string;
   tipo?: string;
-  colecao: string;
+  colecaoId: string;
   bordado?: boolean;
   estampa?: boolean;
 }
@@ -12,7 +12,7 @@ export class Modelo implements IModelo {
   nome!: string;
   responsavel!: string;
   tipo!: string;
-  colecao!: string;
+  colecaoId!: string;
   bordado!: boolean;
   estampa!: boolean;
 }

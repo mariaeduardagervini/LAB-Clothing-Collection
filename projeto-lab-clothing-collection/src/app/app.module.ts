@@ -22,6 +22,7 @@ import { ListaModelosComponent } from './pages/modelos/lista-modelos/lista-model
 import { CriarModeloComponent } from './pages/modelos/criar-modelo/criar-modelo.component';
 import { EditarModeloComponent } from './pages/modelos/editar-modelo/editar-modelo.component';
 import { ExcluirColecaoComponent } from './pages/colecoes/excluir-colecao/excluir-colecao.component';
+import { ExcluirModeloComponent } from './pages/modelos/excluir-modelo/excluir-modelo.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ExcluirColecaoComponent } from './pages/colecoes/excluir-colecao/exclui
     CriarModeloComponent,
     EditarModeloComponent,
     ExcluirColecaoComponent,
+    ExcluirModeloComponent,
   ],
   imports: [
     BrowserModule,
