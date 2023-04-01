@@ -1,13 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Modelo } from 'src/app/models/modelo';
+import { ModelosService } from 'src/app/services/modelos.service';
 
 @Component({
   selector: 'app-lista-modelos',
   templateUrl: './lista-modelos.component.html',
   styleUrls: ['./lista-modelos.component.css'],
 })
-export class ListaModelosComponent {
-  constructor(private router: Router) {}
+export class ListaModelosComponent implements OnInit {
+  listaModelos: Modelo[] = [];
+
+  constructor(private service: ModelosService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.listar();
+  }
+  listar() {
+    this.service.acessarModelos().subscribe((listaModelos) => {
+      this.listaModelos = listaModelos;
+    });
+  }
 
   criarModelo() {
     this.router.navigate(['/criar-modelo']);

@@ -1,6 +1,6 @@
 <h2>Editar Modelo</h2>
 <div class="fundo">
-  <form [formGroup]="editarModeloForm">
+  <form [formGroup]="editarModeloForm" *ngIf="editarModeloForm">
     <div class="row">
       <div class="col">
         <input
@@ -28,9 +28,15 @@
           required
         >
           <option value="" disabled selected>Tipo do modelo</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option value="Bermuda">Bermuda</option>
+          <option value="Biquíni">Biquíni</option>
+          <option value="Bolsa">Bolsa</option>
+          <option value="Boné">Boné</option>
+          <option value="Calça">Calça</option>
+          <option value="Calçados">Calçados</option>
+          <option value="Camisa">Camisa</option>
+          <option value="Chapéu">Chapéu</option>
+          <option value="Saias">Saias</option>
         </select>
       </div>
     </div>

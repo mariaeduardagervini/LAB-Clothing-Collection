@@ -10,7 +10,9 @@ import { ColecoesService } from 'src/app/services/colecoes.service';
 })
 export class ListaColecoesComponent implements OnInit {
   listaColecoes: Colecao[] = [];
+
   constructor(private service: ColecoesService, private router: Router) {}
+
   ngOnInit(): void {
     this.listar();
   }

@@ -13,18 +13,22 @@ export class ColecoesService {
   acessarColecoes(): Observable<Colecao[]> {
     return this.http.get<Colecao[]>(`${API_PATH}/colecoes`);
   }
+
   criar(colecao: Colecao): Observable<Colecao> {
     return this.http.post<Colecao>(`${API_PATH}/colecoes`, colecao);
   }
+
   editar(colecao: Colecao): Observable<Colecao> {
     return this.http.put<Colecao>(
       `${API_PATH}/colecoes/${colecao.id}`,
       colecao
     );
   }
+
   excluir(id: number): Observable<Colecao> {
     return this.http.delete<Colecao>(`${API_PATH}/colecoes/${id}`);
   }
+
   searchId(id: number): Observable<Colecao> {
     return this.http.get<Colecao>(`${API_PATH}/colecoes/${id}`);
   }

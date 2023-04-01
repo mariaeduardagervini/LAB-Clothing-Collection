@@ -16,37 +16,55 @@
       "id": 1,
       "nome": "Saia Plissada",
       "responsavel": "Maria",
-      "colecao": 1
+      "tipo": "Saias",
+      "colecao": 1,
+      "bordado": false,
+      "estampa": false
     },
     {
       "id": 2,
-      "nome": "Vestido Midi",
+      "nome": "Biquíni Tomara que caia",
       "responsavel": "Maria",
-      "colecao": 1
+      "tipo": "Biquíni",
+      "colecao": 1,
+      "bordado": false,
+      "estampa": false
     },
     {
       "id": 3,
       "nome": "Calça Legging",
       "responsavel": "Maria",
-      "colecao": 1
+      "tipo": "Calça",
+      "colecao": 1,
+      "bordado": false,
+      "estampa": false
     },
     {
       "id": 4,
-      "nome": "Shorts de Malha",
+      "nome": "Chapéu Trend",
       "responsavel": "Maria",
-      "colecao": 1
+      "tipo": "Chapéu",
+      "colecao": 1,
+      "bordado": false,
+      "estampa": false
     },
     {
       "id": 5,
-      "nome": "Camiseta de Algodão",
+      "nome": "Camisa de Algodão",
       "responsavel": "Maria",
-      "colecao": 1
+      "tipo": "Camisa",
+      "colecao": 1,
+      "bordado": false,
+      "estampa": false
     },
     {
       "id": 6,
-      "nome": "Jaqueta de Couro",
+      "nome": "Bolsa de Couro",
       "responsavel": "Maria",
-      "colecao": 1
+      "tipo": "Bolsa",
+      "colecao": 1,
+      "bordado": false,
+      "estampa": false
     }
   ],
   "colecoes": [

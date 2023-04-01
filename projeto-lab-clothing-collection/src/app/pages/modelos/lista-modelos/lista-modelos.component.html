@@ -13,11 +13,23 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a routerLink="/editar-modelo">001</a></td>
-        <td><a routerLink="/editar-modelo">Camisetas Sport</a></td>
-        <td><a routerLink="/editar-modelo">Maria Eduarda</a></td>
-        <td><a routerLink="/editar-modelo">Adidas</a></td>
+      <tr *ngFor="let modelo of listaModelos">
+        <td>
+          <a routerLink="/editar-modelo/{{ modelo.id }}">{{ modelo.id }}</a>
+        </td>
+        <td>
+          <a routerLink="/editar-modelo/{{ modelo.nome }}">{{ modelo.nome }}</a>
+        </td>
+        <td>
+          <a routerLink="/editar-modelo/{{ modelo.responsavel }}">{{
+            modelo.responsavel
+          }}</a>
+        </td>
+        <td>
+          <a routerLink="/editar-modelo/{{ modelo.colecao }}">{{
+            modelo.colecao
+          }}</a>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -9,7 +9,16 @@ import { Modelo } from 'src/app/models/modelo';
   styleUrls: ['./editar-modelo.component.css'],
 })
 export class EditarModeloComponent implements OnInit {
-  changeModelo: Modelo = new Modelo();
+  modelo: Modelo = {
+    id: 0,
+    nome: '',
+    responsavel: '',
+    tipo: '',
+    colecao: '',
+    bordado: false,
+    estampa: false,
+  };
+
   editarModeloForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private router: Router) {}
