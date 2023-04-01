@@ -14,12 +14,22 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a routerLink="/editar-colecao">Adidas</a></td>
-        <td><a routerLink="/editar-colecao">Maria Eduarda</a></td>
-        <td><a routerLink="/editar-colecao">Inverno 2023</a></td>
-        <td><a routerLink="/editar-colecao">10</a></td>
-        <td><a routerLink="/editar-colecao">R$ 9.500,00</a></td>
+      <tr *ngFor="let colecao of listaColecoes">
+        <td>
+          <a routerLink="/editar-colecao">{{ colecao.nome }}</a>
+        </td>
+        <td>
+          <a routerLink="/editar-colecao">{{ colecao.responsavel }}</a>
+        </td>
+        <td>
+          <a routerLink="/editar-colecao">{{ colecao.estacao }}</a>
+        </td>
+        <td>
+          <a routerLink="/editar-colecao">{{ colecao.qtdModelos }}</a>
+        </td>
+        <td>
+          <a routerLink="/editar-colecao">{{ colecao.orcamento }}</a>
+        </td>
       </tr>
     </tbody>
   </table>

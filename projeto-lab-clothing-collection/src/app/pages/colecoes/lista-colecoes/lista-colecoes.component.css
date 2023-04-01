@@ -7,7 +7,7 @@
 
 .tabela-colecao {
   background-color: #ffffff;
-  height: 350px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;

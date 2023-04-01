@@ -3,8 +3,9 @@ export interface IColecao {
   nome: string;
   responsavel: string;
   estacao: string;
-  marca: string;
-  orçamento: string;
+  marca?: string;
+  qtdModelos: number;
+  orcamento: number;
 }
 export class Colecao implements IColecao {
   id?: number;
@@ -12,5 +13,6 @@ export class Colecao implements IColecao {
   responsavel!: string;
   estacao!: string;
   marca!: string;
-  orçamento!: string;
+  qtdModelos!: number;
+  orcamento!: number;
 }

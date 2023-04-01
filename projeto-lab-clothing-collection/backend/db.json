@@ -54,43 +54,49 @@
       "id": 1,
       "nome": "Nike",
       "responsavel": "Maria",
-      "qtdModelos": "2",
-      "orçamento": 8500
+      "qtdModelos": 2,
+      "estacao": "Verão 2023",
+      "orcamento": 7500
     },
     {
       "id": 2,
       "nome": "Adidas",
       "responsavel": "Maria",
-      "qtdModelos": "2",
-      "orçamento": 8500
+      "qtdModelos": 2,
+      "estacao": "Verão 2023",
+      "orcamento": 6000
     },
     {
       "id": 3,
       "nome": "Osklen",
       "responsavel": "Maria",
-      "qtdModelos": "6",
-      "orçamento": 8500
+      "qtdModelos": 6,
+      "estacao": "Verão 2023",
+      "orcamento": 8000
     },
     {
       "id": 4,
       "nome": "Renner",
       "responsavel": "Maria",
-      "qtdModelos": "3",
-      "orçamento": 6500
+      "qtdModelos": 3,
+      "estacao": "Verão 2023",
+      "orcamento": 6500
     },
     {
       "id": 5,
       "nome": "Farm",
       "responsavel": "Maria",
-      "qtdModelos": "5",
-      "orçamento": 5500
+      "qtdModelos": 5,
+      "estacao": "Verão 2023",
+      "orcamento": 5500
     },
     {
       "id": 6,
       "nome": "Zara",
       "responsavel": "Maria",
-      "qtdModelos": "1",
-      "orçamento": 3500
+      "qtdModelos": 1,
+      "estacao": "Verão 2023",
+      "orcamento": 3500
     }
   ]
 }
