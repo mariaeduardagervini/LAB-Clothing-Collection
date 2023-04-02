@@ -46,11 +46,11 @@
           class="form-select"
           aria-label="Default select example"
           id="colecao"
-          formControlName="colecao"
+          formControlName="colecaoId"
           required
         >
           <option value="" disabled selected>Selecionar coleção</option>
-          <option *ngFor="let colecao of listaColecoes" [ngValue]="">
+          <option *ngFor="let colecao of listaColecoes" [ngValue]="colecao.id">
             {{ colecao.nome }}
           </option>
         </select>

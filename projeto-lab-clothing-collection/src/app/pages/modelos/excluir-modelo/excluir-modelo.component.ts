@@ -17,6 +17,7 @@ export class ExcluirModeloComponent implements OnInit {
     colecaoId: '',
     bordado: true,
     estampa: true,
+    colecaoNome: '',
   };
   constructor(
     private router: Router,

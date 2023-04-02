@@ -20,6 +20,7 @@ export class EditarModeloComponent implements OnInit {
     responsavel: '',
     tipo: '',
     colecaoId: '',
+    colecaoNome: '',
     bordado: true,
     estampa: true,
   };
@@ -61,6 +62,7 @@ export class EditarModeloComponent implements OnInit {
         ],
         bordado: [modelo.bordado, Validators.required],
         estampa: [modelo.estampa, Validators.required],
+        colecaoNome: [modelo.colecaoNome, Validators.required]
       });
     });
   }
@@ -107,6 +109,8 @@ export class EditarModeloComponent implements OnInit {
   }
 
   onSubmit() {
+    let colecao = this.listaColecoes.find(e => e.id === this.editarModeloForm.value.colecaoId);
+    this.editarModeloForm.value.colecaoNome = colecao?.nome;
     this.service.editar(this.editarModeloForm.value).subscribe(() => {
       this.router.navigate(['/lista-modelos']);
     });

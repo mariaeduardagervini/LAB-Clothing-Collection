@@ -37,7 +37,7 @@ export class CriarModeloComponent implements OnInit {
         '',
         Validators.compose([Validators.required, Validators.minLength(3)]),
       ],
-      colecao: [
+      colecaoid: [
         '',
         Validators.compose([Validators.required, Validators.minLength(3)]),
       ],
@@ -47,6 +47,7 @@ export class CriarModeloComponent implements OnInit {
       ],
       bordado: ['', Validators.required],
       estampa: ['', Validators.required],
+      colecaoNome: ''
     });
   }
   salvarModelo = {
@@ -79,6 +80,8 @@ export class CriarModeloComponent implements OnInit {
   }
 
   onSubmit() {
+    let colecao = this.listaColecoes.find(e => e.id === this.cadastroModeloForm.value.colecaoId);
+    this.cadastroModeloForm.value.colecaoNome = colecao?.nome;
     this.service.criar(this.cadastroModeloForm.value).subscribe(() => {
       this.router.navigate(['/lista-modelos']);
     });

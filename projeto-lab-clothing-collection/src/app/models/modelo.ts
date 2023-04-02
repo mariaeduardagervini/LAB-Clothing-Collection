@@ -4,6 +4,7 @@ export interface IModelo {
   responsavel: string;
   tipo?: string;
   colecaoId: string;
+  colecaoNome: string;
   bordado?: boolean;
   estampa?: boolean;
 }
@@ -13,6 +14,7 @@ export class Modelo implements IModelo {
   responsavel!: string;
   tipo!: string;
   colecaoId!: string;
+  colecaoNome!: string;
   bordado!: boolean;
   estampa!: boolean;
 }
