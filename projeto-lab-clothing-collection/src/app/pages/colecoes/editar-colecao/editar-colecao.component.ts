@@ -16,7 +16,7 @@ export class EditarColecaoComponent implements OnInit {
     responsavel: '',
     estacao: '',
     marca: '',
-    qtdModelos: 0,
+    modelos: [],
     orcamento: 0,
     anoLancamento: 0,
   };
@@ -54,7 +54,7 @@ export class EditarColecaoComponent implements OnInit {
           colecao.marca,
           Validators.compose([Validators.required, Validators.minLength(2)]),
         ],
-        qtdModelos: [colecao.qtdModelos],
+        modelos: [colecao.modelos],
         orcamento: [colecao.orcamento, Validators.required],
         anoLancamento: [colecao.anoLancamento, Validators.required],
       });

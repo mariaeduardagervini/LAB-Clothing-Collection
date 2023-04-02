@@ -15,6 +15,7 @@ export class CriarModeloComponent implements OnInit {
   newModelo: Modelo = new Modelo();
   cadastroModeloForm!: FormGroup;
   listaColecoes: Colecao[] = [];
+  newColecao: Colecao = new Colecao();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -37,7 +38,7 @@ export class CriarModeloComponent implements OnInit {
         '',
         Validators.compose([Validators.required, Validators.minLength(3)]),
       ],
-      colecao: [
+      colecaoId: [
         '',
         Validators.compose([Validators.required, Validators.minLength(3)]),
       ],
@@ -79,9 +80,26 @@ export class CriarModeloComponent implements OnInit {
   }
 
   onSubmit() {
-    this.service.criar(this.cadastroModeloForm.value).subscribe(() => {
-      this.router.navigate(['/lista-modelos']);
+    this.listarColecoes.forEach((): Colecao => {
+      return this.newColecao;
     });
+    var colecaoIdentify;
+    for (let colecao2 in this.listarColecoes) {
+      if (colecao2.nome === this.cadastroModeloForm.value.colecaoId) {
+        colecaoIdentify = colecao2.id;
+      }
+    }
+    this.serviceColecoes
+      .searchId(this.cadastroModeloForm.value.colecaoId)
+      .subscribe((colecao) => {
+        this.newColecao = colecao;
+      });
+    this.newColecao.modelos.push(this.cadastroModeloForm.value);
+    this.serviceColecoes.editar(this.newColecao);
+
+    // this.service.criar(this.cadastroModeloForm.value).subscribe(() => {
+    //  this.router.navigate(['/lista-modelos']);
+    //  });
   }
   cancelar() {
     this.router.navigate(['/lista-modelos']);

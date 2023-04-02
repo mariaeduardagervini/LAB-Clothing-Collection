@@ -25,6 +25,7 @@ export class EditarModeloComponent implements OnInit {
   };
 
   editarModeloForm!: FormGroup;
+  newColecao: Colecao = new Colecao();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -107,13 +108,21 @@ export class EditarModeloComponent implements OnInit {
   }
 
   onSubmit() {
-    this.service.editar(this.editarModeloForm.value).subscribe(() => {
-      this.router.navigate(['/lista-modelos']);
-    });
+    this.serviceColecoes
+      .searchId(this.editarModeloForm.value.colecaoId)
+      .subscribe((colecao) => {
+        this.newColecao = colecao;
+      });
+    this.newColecao.modelos.push(this.editarModeloForm.value);
+    this.serviceColecoes.editar(this.newColecao);
+    //this.service.editar(this.editarModeloForm.value).subscribe(() => {
+    //  this.router.navigate(['/lista-modelos']);
+    // });
   }
   cancelar() {
     this.router.navigate(['/lista-modelos']);
   }
+
   excluir(): void {
     const newId = this.activatedRoute.snapshot.paramMap.get('id');
     this.router.navigate([`/excluir-modelo/${newId}`]);

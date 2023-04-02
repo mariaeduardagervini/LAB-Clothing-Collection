@@ -1,10 +1,12 @@
+import { Modelo } from './modelo';
+
 export interface IColecao {
   id?: number;
   nome: string;
   responsavel: string;
   estacao: string;
   marca?: string;
-  qtdModelos: number;
+  modelos: Array<Modelo>;
   orcamento: number;
   anoLancamento?: number;
 }
@@ -14,7 +16,7 @@ export class Colecao implements IColecao {
   responsavel!: string;
   estacao!: string;
   marca!: string;
-  qtdModelos!: number;
+  modelos!: Array<Modelo>;
   orcamento!: number;
   anoLancamento?: number;
 }

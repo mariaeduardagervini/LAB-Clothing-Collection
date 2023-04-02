@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { API_PATH } from 'src/environments/environment';
 import { Colecao } from '../models/colecao';
+import { Modelo } from '../models/modelo';
 
 @Injectable({
   providedIn: 'root',

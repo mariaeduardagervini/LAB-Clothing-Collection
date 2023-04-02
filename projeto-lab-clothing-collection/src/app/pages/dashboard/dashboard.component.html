@@ -19,7 +19,7 @@
       <tr *ngFor="let colecoes of listaColecoes">
         <td>{{ colecoes.nome }}</td>
         <td>{{ colecoes.responsavel }}</td>
-        <td>{{ colecoes.qtdModelos }}</td>
+        <td>{{ colecoes.modelos.length }}</td>
         <td>{{ colecoes.orcamento | currency : "BRL" }}</td>
       </tr>
     </tbody>

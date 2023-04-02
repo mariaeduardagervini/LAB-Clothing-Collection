@@ -15,7 +15,7 @@ export class ExcluirColecaoComponent implements OnInit {
     responsavel: '',
     estacao: '',
     marca: '',
-    qtdModelos: 0,
+    modelos: [],
     orcamento: 0,
     anoLancamento: 0,
   };

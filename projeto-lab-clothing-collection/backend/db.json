@@ -18,39 +18,39 @@
       "responsavel": "Maria",
       "estacao": "Verão 2023",
       "marca": "Nike",
-      "qtdModelos": 5,
       "orcamento": "7500",
-      "anoLancamento": "2023"
+      "anoLancamento": "2023",
+      "modelos": []
     },
     {
       "id": 2,
       "nome": "Always Original",
       "responsavel": "Maria",
-      "qtdModelos": 5,
       "marca": "Adidas",
       "estacao": "Verão 2023",
       "orcamento": 6000,
-      "anoLancamento": 2023
+      "anoLancamento": 2023,
+      "modelos": []
     },
     {
       "id": 3,
       "nome": "Jardins Tropicais",
       "responsavel": "Maria",
-      "qtdModelos": 5,
       "marca": "Osklen",
       "estacao": "Verão 2023",
       "orcamento": 8000,
-      "anoLancamento": 2023
+      "anoLancamento": 2023,
+      "modelos": []
     },
     {
       "id": 4,
       "nome": "Primavera Verão",
       "responsavel": "Maria",
-      "qtdModelos": 5,
       "marca": "Renner",
       "estacao": "Verão 2023",
       "orcamento": 6500,
-      "anoLancamento": 2023
+      "anoLancamento": 2023,
+      "modelos": []
     },
     {
       "id": 5,
@@ -58,19 +58,29 @@
       "responsavel": "Maria",
       "estacao": "Verão 2023",
       "marca": "Farm",
-      "qtdModelos": 5,
       "orcamento": 5500,
-      "anoLancamento": 2023
+      "anoLancamento": 2023,
+      "modelos": []
     },
     {
       "id": 6,
-      "nome": "The Collection",
+      "nome": "The Collection 2",
       "responsavel": "Maria",
       "estacao": "Verão 2023",
       "marca": "Zara",
-      "qtdModelos": 5,
       "orcamento": 5800,
-      "anoLancamento": 2023
+      "anoLancamento": 2023,
+      "modelos": []
+    },
+    {
+      "nome": "Maria",
+      "responsavel": "Maria",
+      "estacao": "Verão",
+      "marca": "Adidas",
+      "orcamento": "5400",
+      "anoLancamento": "2023",
+      "modelos": [],
+      "id": 8
     }
   ],
   "modelos": [
@@ -127,6 +137,24 @@
       "colecaoId": 1,
       "bordado": false,
       "estampa": false
+    },
+    {
+      "nome": "Blusa",
+      "tipo": "Camisa",
+      "colecao": "Primavera Verão",
+      "responsavel": "Maria",
+      "bordado": "bordado-false",
+      "estampa": "estampa-false",
+      "id": 7
+    },
+    {
+      "nome": "Maria",
+      "tipo": "Bolsa",
+      "colecaoId": "",
+      "responsavel": "Maria",
+      "bordado": "bordado-false",
+      "estampa": "estampa-false",
+      "id": 8
     }
   ]
 }

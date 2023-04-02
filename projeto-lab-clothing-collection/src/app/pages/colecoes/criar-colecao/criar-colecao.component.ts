@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Colecao } from 'src/app/models/colecao';
 import { Router } from '@angular/router';
 import { ColecoesService } from 'src/app/services/colecoes.service';
+import { Modelo } from 'src/app/models/modelo';
 
 @Component({
   selector: 'app-criar-colecao',
@@ -42,6 +43,7 @@ export class CriarColecaoComponent implements OnInit {
       ],
       orcamento: ['', Validators.required],
       anoLancamento: ['', Validators.required],
+      modelos: [new Array<Modelo>()],
     });
   }
   salvarColecao = {
