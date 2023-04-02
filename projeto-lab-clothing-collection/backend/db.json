@@ -18,7 +18,7 @@
       "responsavel": "Maria",
       "estacao": "Verão 2023",
       "marca": "Nike",
-      "qtdModelos": 2,
+      "qtdModelos": 5,
       "orcamento": "7500",
       "anoLancamento": "2023"
     },
@@ -26,7 +26,7 @@
       "id": 2,
       "nome": "Always Original",
       "responsavel": "Maria",
-      "qtdModelos": 2,
+      "qtdModelos": 5,
       "marca": "Adidas",
       "estacao": "Verão 2023",
       "orcamento": 6000,
@@ -36,7 +36,7 @@
       "id": 3,
       "nome": "Jardins Tropicais",
       "responsavel": "Maria",
-      "qtdModelos": 6,
+      "qtdModelos": 5,
       "marca": "Osklen",
       "estacao": "Verão 2023",
       "orcamento": 8000,
@@ -46,7 +46,7 @@
       "id": 4,
       "nome": "Primavera Verão",
       "responsavel": "Maria",
-      "qtdModelos": 3,
+      "qtdModelos": 5,
       "marca": "Renner",
       "estacao": "Verão 2023",
       "orcamento": 6500,
@@ -60,6 +60,16 @@
       "marca": "Farm",
       "qtdModelos": 5,
       "orcamento": 5500,
+      "anoLancamento": 2023
+    },
+    {
+      "id": 6,
+      "nome": "The Collection",
+      "responsavel": "Maria",
+      "estacao": "Verão 2023",
+      "marca": "Zara",
+      "qtdModelos": 5,
+      "orcamento": 5800,
       "anoLancamento": 2023
     }
   ],

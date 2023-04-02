@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Colecao } from 'src/app/models/colecao';
+import { ColecoesService } from 'src/app/services/colecoes.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
+  listaColecoes: Colecao[] = [];
   cards = [
     { titulo: 'Coleções', valor: 0 },
     { titulo: 'Modelos', valor: 0 },
@@ -20,4 +24,14 @@ export class DashboardComponent {
       },
     },
   ];
+  constructor(private service: ColecoesService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.listar();
+  }
+  listar() {
+    this.service.acessarColecoes().subscribe((listaColecoes) => {
+      this.listaColecoes = listaColecoes;
+    });
+  }
 }

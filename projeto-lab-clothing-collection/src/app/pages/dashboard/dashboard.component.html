@@ -16,11 +16,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Adidas</td>
-        <td>Maria Eduarda</td>
-        <td>10</td>
-        <td>R$ 9.500,00</td>
+      <tr *ngFor="let colecoes of listaColecoes">
+        <td>{{ colecoes.nome }}</td>
+        <td>{{ colecoes.responsavel }}</td>
+        <td>{{ colecoes.qtdModelos }}</td>
+        <td>{{ colecoes.orcamento | currency : "BRL" }}</td>
       </tr>
     </tbody>
   </table>
