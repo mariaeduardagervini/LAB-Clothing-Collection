@@ -13,6 +13,7 @@ import { ModelosService } from 'src/app/services/modelos.service';
 })
 export class EditarModeloComponent implements OnInit {
   listaColecoes: Colecao[] = [];
+
   modelo: Modelo = {
     id: 0,
     nome: '',

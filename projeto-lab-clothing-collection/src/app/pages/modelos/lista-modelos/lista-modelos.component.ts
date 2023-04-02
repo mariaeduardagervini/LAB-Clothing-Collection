@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Colecao } from 'src/app/models/colecao';
 import { Modelo } from 'src/app/models/modelo';
+import { ColecoesService } from 'src/app/services/colecoes.service';
 import { ModelosService } from 'src/app/services/modelos.service';
 
 @Component({
@@ -9,16 +11,30 @@ import { ModelosService } from 'src/app/services/modelos.service';
   styleUrls: ['./lista-modelos.component.css'],
 })
 export class ListaModelosComponent implements OnInit {
+  listaColecoes: Colecao[] = [];
   listaModelos: Modelo[] = [];
 
-  constructor(private service: ModelosService, private router: Router) {}
+  constructor(
+    private service: ModelosService,
+    private router: Router,
+    private serviceColecoes: ColecoesService
+  ) {}
 
   ngOnInit(): void {
     this.listar();
+    this.listarColecoes();
   }
   listar() {
     this.service.acessarModelos().subscribe((listaModelos) => {
       this.listaModelos = listaModelos;
+    });
+  }
+
+  listarColecoes() {
+    this.serviceColecoes.acessarColecoes().subscribe((listarColecoes) => {
+      this.listaColecoes = listarColecoes;
+      const nomes = this.listaColecoes.map((i) => i.nome);
+      console.log(nomes);
     });
   }
 

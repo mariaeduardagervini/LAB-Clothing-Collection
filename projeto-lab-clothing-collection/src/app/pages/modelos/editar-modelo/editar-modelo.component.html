@@ -50,7 +50,7 @@
           required
         >
           <option value="" disabled selected>Selecionar coleção</option>
-          <option *ngFor="let colecao of listaColecoes">
+          <option *ngFor="let colecao of listaColecoes" [ngValue]="">
             {{ colecao.nome }}
           </option>
         </select>

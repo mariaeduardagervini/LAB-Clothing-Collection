@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Colecao } from 'src/app/models/colecao';
 import { Modelo } from 'src/app/models/modelo';
+import { ColecoesService } from 'src/app/services/colecoes.service';
+import { ModelosService } from 'src/app/services/modelos.service';
 
 @Component({
   selector: 'app-criar-modelo',
@@ -11,11 +14,18 @@ import { Modelo } from 'src/app/models/modelo';
 export class CriarModeloComponent implements OnInit {
   newModelo: Modelo = new Modelo();
   cadastroModeloForm!: FormGroup;
+  listaColecoes: Colecao[] = [];
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private service: ModelosService,
+    private serviceColecoes: ColecoesService
+  ) {}
 
   ngOnInit(): void {
     this.criarModelo(new Modelo());
+    this.listarColecoes();
   }
   criarModelo(newModelo: Modelo) {
     this.cadastroModeloForm = this.formBuilder.group({
@@ -62,9 +72,16 @@ export class CriarModeloComponent implements OnInit {
       border: 'none',
     },
   };
+  listarColecoes() {
+    this.serviceColecoes.acessarColecoes().subscribe((listarColecoes) => {
+      this.listaColecoes = listarColecoes;
+    });
+  }
 
   onSubmit() {
-    this.router.navigate(['/lista-modelos']);
+    this.service.criar(this.cadastroModeloForm.value).subscribe(() => {
+      this.router.navigate(['/lista-modelos']);
+    });
   }
   cancelar() {
     this.router.navigate(['/lista-modelos']);

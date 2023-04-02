@@ -37,7 +37,7 @@
         </td>
         <td>
           <a routerLink="/editar-colecao/{{ colecao.id }}">
-            {{ colecao.orcamento }}
+            {{ colecao.orcamento | currency : "BRL" }}
           </a>
         </td>
       </tr>

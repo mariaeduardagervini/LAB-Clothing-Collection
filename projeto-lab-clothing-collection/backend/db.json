@@ -114,7 +114,7 @@
       "nome": "Bolsa de Couro",
       "responsavel": "Maria",
       "tipo": "Bolsa",
-      "colecao": 1,
+      "colecaoId": 1,
       "bordado": false,
       "estampa": false
     }
