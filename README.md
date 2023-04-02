@@ -20,10 +20,10 @@ Após baixar o repositório do projeto, você deve abri-lo com o Visual Studio C
 <h1> 🚪 Login</h1>
 Você pode acessar o sistema pelos usuários cadastrados abaixo (que já estão cadastrados na pasta db.json), ou criar um novo usuário e utilizá-lo para acessar.<br>
 <br>
-Usuário 👩<br>
+<b>USUÁRIO</b> 👩<br>
 ✉️ E-mail: maria@email.com<br>
 🔑 Senha: Maria@12<br>
 <br><br>
-Usuário 🧑<br>
+<b>USUÁRIO</b>🧑<br>
 ✉️ E-mail: dev@email.com<br>
 🔑 Senha: Dev@1234<br>
