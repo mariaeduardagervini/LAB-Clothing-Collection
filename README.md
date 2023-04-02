@@ -13,7 +13,7 @@ Após baixar o repositório do projeto, você deve abri-lo com o Visual Studio C
 	<li>Após aberta, abra um novo terminal </li>
 	<li>No terminal digite o comando "cd projeto-lab-clothing-collection" para entrar na pasta do projeto</li>
 	<li>Feito isso, utilize o comando "ng serve" para abrir a aplicação no localhost</li>
-	<li>Depois de executada com sucesso, abra um novo terminal, axecute o passo <b>3</b> e acesse primeiro a pasta de backend, através do comando "cd backend"</li>
+	<li>Depois de executada com sucesso, abra um novo terminal, execute o passo <b>3</b> e acesse primeiro a pasta de backend, através do comando "cd backend"</li>
 	<li>Dentro da pasta backend, insira o comando "json-server --watch db.json"</li>
 </ol>
 
