@@ -1,16 +1,16 @@
 .form {
   position: absolute;
   width: 480px;
-  height: 570px;
+  height: 450px;
   background: #ffffff;
   border-radius: 8px;
-  top: 222px;
+  top: 170px;
 }
 
 form {
   position: absolute;
-  padding: 130px 40px;
-  height: 570px;
+  padding: 50px 40px;
+  height: 470px;
 }
 
 h2 {
@@ -18,7 +18,7 @@ h2 {
   width: 100px;
   height: 29px;
   left: 201px;
-  top: 33px;
+  top: -78px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -34,7 +34,7 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 5px;
   text-align: center;
   color: #b4b6c1;
 }
@@ -43,7 +43,7 @@ p {
   width: 352px;
   height: 19px;
   left: 64px;
-  top: 75px;
+  top: 25px;
 }
 .form-floating {
   display: flex;
@@ -72,7 +72,7 @@ input[type="password"] {
 
 .botao {
   position: relative;
-  bottom: 250px;
+  bottom: 275px;
   right: 39px;
 }
 .span-cadastro {
