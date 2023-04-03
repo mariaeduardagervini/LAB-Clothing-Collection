@@ -9,7 +9,7 @@ export interface IColecao {
   anoLancamento?: number;
 }
 export class Colecao implements IColecao {
-  id?: number;
+  id!: number;
   nome!: string;
   responsavel!: string;
   estacao!: string;

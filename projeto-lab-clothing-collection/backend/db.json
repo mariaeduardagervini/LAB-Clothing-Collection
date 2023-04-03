@@ -77,20 +77,22 @@
     {
       "id": 1,
       "nome": "Saia Plissada",
-      "responsavel": "Maria",
       "tipo": "Saias",
       "colecaoId": 1,
-      "bordado": false,
-      "estampa": false
+      "responsavel": "Maria",
+      "bordado": "true",
+      "estampa": "true",
+      "colecaoNome": "Sportswear French"
     },
     {
       "id": 2,
       "nome": "Biquíni Tomara que caia",
-      "responsavel": "Maria",
       "tipo": "Biquíni",
-      "colecaoId": 2,
-      "bordado": false,
-      "estampa": false
+      "colecaoId": 6,
+      "responsavel": "Maria",
+      "bordado": "false",
+      "estampa": "true",
+      "colecaoNome": "The Collection"
     },
     {
       "id": 3,
@@ -98,35 +100,39 @@
       "tipo": "Calça",
       "colecaoId": 3,
       "responsavel": "Maria",
-      "bordado": "bordado-false",
-      "estampa": "estampa-true"
+      "bordado": "false",
+      "estampa": "false",
+      "colecaoNome": "Jardins Tropicais"
     },
     {
       "id": 4,
       "nome": "Chapéu Trend",
-      "responsavel": "Maria",
       "tipo": "Chapéu",
       "colecaoId": 4,
-      "bordado": false,
-      "estampa": false
+      "responsavel": "Maria",
+      "bordado": "false",
+      "estampa": "false",
+      "colecaoNome": "Primavera Verão"
     },
     {
       "id": 5,
       "nome": "Camisa de Algodão",
-      "responsavel": "Maria",
       "tipo": "Camisa",
       "colecaoId": 5,
-      "bordado": false,
-      "estampa": false
+      "responsavel": "Maria",
+      "bordado": "false",
+      "estampa": "false",
+      "colecaoNome": "Doce Arara"
     },
     {
       "id": 6,
       "nome": "Bolsa de Couro",
-      "responsavel": "Maria",
       "tipo": "Bolsa",
-      "colecaoId": 1,
-      "bordado": false,
-      "estampa": false
+      "colecaoId": 2,
+      "responsavel": "Maria",
+      "bordado": "false",
+      "estampa": "false",
+      "colecaoNome": "Always Original"
     }
   ]
 }

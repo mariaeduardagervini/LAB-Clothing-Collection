@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Colecao } from 'src/app/models/colecao';
+import { Modelo } from 'src/app/models/modelo';
 import { ColecoesService } from 'src/app/services/colecoes.service';
+import { ModelosService } from 'src/app/services/modelos.service';
 
 @Component({
   selector: 'app-lista-colecoes',
@@ -9,18 +11,36 @@ import { ColecoesService } from 'src/app/services/colecoes.service';
   styleUrls: ['./lista-colecoes.component.css'],
 })
 export class ListaColecoesComponent implements OnInit {
-  listaColecoes: Colecao[] = [];
+  listColecoes: Colecao[] = [];
+  listModelos: Modelo[] = []
 
-  constructor(private service: ColecoesService, private router: Router) {}
+  constructor(private service: ColecoesService, private router: Router, private serviceModelos: ModelosService) {}
 
   ngOnInit(): void {
+    this.listarModelos()
     this.listar();
   }
   listar() {
     this.service.acessarColecoes().subscribe((listaColecoes) => {
-      this.listaColecoes = listaColecoes;
+      this.listColecoes = listaColecoes;
+      this.listColecoes.forEach(e => {
+      let count =  this.listModelos.filter(x => parseInt(x.colecaoId) === e.id).length
+      e.qtdModelos = count
+
+    });
+   
+   })
+  }
+
+
+  listarModelos() {
+    this.serviceModelos.acessarModelos().subscribe((listaModelos) => {
+      this.listModelos = listaModelos;
+
     });
   }
+
+
   criarColecao() {
     this.router.navigate(['/criar-colecao']);
   }
